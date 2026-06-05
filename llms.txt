@@ -32,3 +32,10 @@
 /AGENTS.md | CLAIM_BOUNDARY.md | README.md | WIKI.md | CHANGELOG.md
 
 version: 1.0.0 | updated: 2026-06 | license: MIT | repo: github.com/MShneur/rduck
+
+## One-Shot Full Load
+/llms-full.txt  — ALL core + capability protocols concatenated (~67KB, ~1700 lines)
+                   For AIs that can only fetch once per turn, this loads the full system.
+
+## Live Site
+https://rd.mstep.org  — all files served as raw markdown (no HTML conversion)
