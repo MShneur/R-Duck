@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build site (generate index pages + llms-full.txt)
+        run: bash build.sh
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
