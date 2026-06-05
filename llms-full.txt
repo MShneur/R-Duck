@@ -1,10 +1,7 @@
 # R&Duck v1.0.0 — Full Protocol (Single-File Load)
-# Auto-generated on every deploy. Do not edit manually.
-# Individual files at the site root or via llms.txt index.
+# Auto-generated on deploy. Individual files at the site root.
 
-# ════════════════════════════════════════
-# FILE: core/boot.md
-# ════════════════════════════════════════
+# ═══ FILE: core/boot.md ═══
 # R&Duck Boot Protocol v1.0.0
 # Merges: bootloader + handshake + session-profile
 # Everything about HOW THIS SESSION STARTS lives here. Nothing else.
@@ -102,9 +99,7 @@ rules: core/rules.md | runtime: core/runtime.md | routing: core/routing.md
 continuity: core/continuity.md | review: core/review.md
 repo: github.com/MShneur/rduck | license: MIT
 
-# ════════════════════════════════════════
-# FILE: core/rules.md
-# ════════════════════════════════════════
+# ═══ FILE: core/rules.md ═══
 # R&Duck Rules v1.0.0 — INVARIANTS ONLY
 # Single policy source (AG-03). All downstream files reference rule IDs. No parameters here.
 
@@ -191,9 +186,7 @@ AUTONOMY HOOK: Higher autonomy raises gate density on consequential actions.
 PARAMETER SOURCE: This file holds INVARIANTS only. All runtime parameters (host, cutoff, tier,
   freshness, cadence, autonomy, domains) live in the session profile (boot.md) and are DERIVED.
 
-# ════════════════════════════════════════
-# FILE: core/runtime.md
-# ════════════════════════════════════════
+# ═══ FILE: core/runtime.md ═══
 # R&Duck Runtime Protocol v1.0.0
 # Merges: persistence + confidence + freshness
 # Everything about MAINTAINING QUALITY DURING THE SESSION lives here.
@@ -270,9 +263,7 @@ Generate offload before producing a weak answer (see routing.md).
 Cannot: guarantee zero drift | make model deterministic | verify live facts without tool |
 guarantee cross-session persistence without storage | provide independent Audit from same model.
 
-# ════════════════════════════════════════
-# FILE: core/routing.md
-# ════════════════════════════════════════
+# ═══ FILE: core/routing.md ═══
 # R&Duck Routing Protocol v1.0.0
 # Merges: compose + model-router
 # Everything about WHERE WORK GOES lives here.
@@ -360,9 +351,7 @@ Never send sensitive data to offshore or unclear-policy models.
 After response: "R&Duck: Ingest [MODEL] output on [topic]"
 ```
 
-# ════════════════════════════════════════
-# FILE: core/continuity.md
-# ════════════════════════════════════════
+# ═══ FILE: core/continuity.md ═══
 # R&Duck Continuity Protocol v1.0.0
 # Merges: handoff + corrections (PSCM)
 # Everything about SESSION TRANSITIONS AND CORRECTION PERSISTENCE lives here.
@@ -461,9 +450,7 @@ review B4 → declare "[N] preferences, [N] corrections active."
 Same-model correction review is biased. Reload not automatic on all platforms (T0/T1 manual).
 Governance biases behavior — does not guarantee enforcement.
 
-# ════════════════════════════════════════
-# FILE: core/review.md
-# ════════════════════════════════════════
+# ═══ FILE: core/review.md ═══
 # R&Duck Review Protocol v1.0.0
 # The DA / SPAR / BENCH ladder. Auto-casts reviewers by task. You never fill in roles.
 
@@ -549,9 +536,7 @@ SCOPE_DRIFT:       output grew beyond task boundary
 CONFIDENCE_INFLATION: weak claims without hedging
 ```
 
-# ════════════════════════════════════════
-# FILE: capabilities/audit.md
-# ════════════════════════════════════════
+# ═══ FILE: capabilities/audit.md ═══
 ---
 component-id: capability-audit
 component-type: capability
@@ -730,9 +715,7 @@ When verifying own prior output:
 ---
 *GOV: [AU-01][G25][G18][LOCK-5]*
 
-# ════════════════════════════════════════
-# FILE: capabilities/code.md
-# ════════════════════════════════════════
+# ═══ FILE: capabilities/code.md ═══
 ---
 component-id: capability-code
 component-type: capability
@@ -864,9 +847,7 @@ Do not just fix the bug. Also:
 ---
 *GOV: [AU-01][G25] | VERIFY_BEFORE_USE flag applies to all hallucination-risk APIs*
 
-# ════════════════════════════════════════
-# FILE: capabilities/research.md
-# ════════════════════════════════════════
+# ═══ FILE: capabilities/research.md ═══
 ---
 component-id: capability-research
 component-type: capability
@@ -1004,9 +985,7 @@ If the research question requires:
 ---
 *GOV: [AU-01][G25][G19] | Routes to: core/model-router.md when live search needed*
 
-# ════════════════════════════════════════
-# FILE: capabilities/rred.md
-# ════════════════════════════════════════
+# ═══ FILE: capabilities/rred.md ═══
 ---
 component-id: capability-rred
 component-type: capability-protocol
@@ -1456,9 +1435,7 @@ Character skin (Reddington or other): applied on top; never overrides CORE or LC
 ---
 END RRED_PROTOCOL v2.0
 
-# ════════════════════════════════════════
-# FILE: capabilities/strategize.md
-# ════════════════════════════════════════
+# ═══ FILE: capabilities/strategize.md ═══
 ---
 component-id: capability-strategize
 component-type: capability
@@ -1547,9 +1524,7 @@ State when this strategy should be reviewed:
 ---
 *GOV: [AU-01][G25]*
 
-# ════════════════════════════════════════
-# FILE: capabilities/write.md
-# ════════════════════════════════════════
+# ═══ FILE: capabilities/write.md ═══
 ---
 component-id: capability-write
 component-type: capability
@@ -1671,9 +1646,7 @@ When revising existing content:
 ---
 *GOV: [AU-01][G25][G15] | Uses: libraries/registers.md, libraries/audiences.md*
 
-# ════════════════════════════════════════
-# FILE: specs/governance-gate.md
-# ════════════════════════════════════════
+# ═══ FILE: specs/governance-gate.md ═══
 # R&Duck Governance Gate v1.0.0
 # Merges: domain-template + gatekeeper-protocol + component-registry + BUILD MODE
 # Everything about ADMITTING NEW COMPONENTS AND BUILDING THE SYSTEM lives here.
