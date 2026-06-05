@@ -1,0 +1,34 @@
+# R&Duck v1.0.0 — Progressive Loading Index
+# Scan this first (~50 tokens/section). Fetch only what the task needs. AD-04: ≤150-200 instructions.
+
+## Core (always loaded)
+/core/boot.md          — activation, session profile, autonomy levels, vocabulary
+/core/rules.md         — Golden Rule Index (invariants only, single policy source)
+
+## Core (load as needed)
+/core/runtime.md       — freshness, confidence, persistence, re-anchoring, state blocks
+/core/routing.md       — domain composition, model routing, saturation, offload
+/core/continuity.md    — handoff schema, PSCM corrections, summary packets
+/core/review.md        — DA / SPAR / BENCH review ladder
+
+## Capabilities (load for task)
+/capabilities/write.md | research.md | audit.md | strategize.md | code.md | rred.md
+
+## Domains (load ONE at a time)
+/domains/research | claims-disputes | crisis-response | public-communication
+/domains/legal-strategy | technical-analysis | business-strategy | creative-production
+
+## Libraries (loaded by capabilities/domains)
+/libraries/personas.md | audiences.md | registers.md
+
+## Workers & Specs
+/workers/worker-templates.md    — 7 types + Summary Packet schema
+/specs/governance-gate.md       — G25 gate + component registry + DUCK_BUILD
+
+## Research
+/research/evolution-ledger.md | decisions.md | feedback.md
+
+## Top-level
+/AGENTS.md | CLAIM_BOUNDARY.md | README.md | WIKI.md | CHANGELOG.md
+
+version: 1.0.0 | updated: 2026-06 | license: MIT | repo: github.com/MShneur/rduck
