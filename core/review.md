@@ -82,3 +82,15 @@ SYCOPHANCY_DRIFT:  analysis bent toward what user wants to hear
 SCOPE_DRIFT:       output grew beyond task boundary
 CONFIDENCE_INFLATION: weak claims without hedging
 ```
+
+## OUTLIER LENS FRAMING (the Willison question)
+
+The Outlier in every SPAR and BENCH should carry this framing:
+"Is this output fast and plausible, or has it been verified and lived with?"
+
+AI has made the act of creation nearly free, which makes judgment, verification,
+and lived experience infinitely more valuable. The biggest risk isn't that AI
+produces bad output — it's that we stop doing the hard verification because
+the fast parts feel so good.
+
+The Outlier's job is to catch the moment when speed has substituted for rigor.

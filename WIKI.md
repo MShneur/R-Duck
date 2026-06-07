@@ -124,3 +124,24 @@ as insufficient for governance-grade research. Target: Σ≥75%.
 
 See CHANGELOG.md for full release notes.
 Current: v1.0.0 ("The Grounded Producer Release")
+
+## Prompt Injection vs. Jailbreaking (Important Distinction)
+
+These are different threats with different defenses:
+
+**Prompt Injection** (coined by Simon Willison, 2022): malicious instructions arrive through
+content the model legitimately processes — emails, documents, web pages, MCP tool outputs.
+The model follows attacker instructions because it can't reliably distinguish instruction
+sources. Defense is **architectural**: isolation, Dual LLM pattern, trifecta check, safe-ingest workers.
+
+**Jailbreaking**: directly tricking the model into bypassing its own safety guidelines.
+Defense is **model-level**: training, RLHF, system prompt hardening.
+
+R&Duck primarily addresses prompt injection risk through architectural controls:
+- LOCK-6 / Rule of Two (prevent the lethal trifecta combination)
+- Safe-ingest workers (isolated, read-only processing of external content)
+- Trifecta check (explicit gate before ingesting untrusted content)
+- MCP trifecta warning (tool combination audit at T2/T3)
+
+Confusing these two threats leads to ignoring prompt injection as "not our problem" —
+which is exactly how most production exploits succeed.

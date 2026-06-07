@@ -68,3 +68,17 @@ The corpus that built R&Duck identified overclaiming as one of the core failure 
 This document is a commitment to honesty over impression management.
 
 *GOV: [AU-01][G19]*
+
+---
+
+## The Prudence Framing
+
+Shields can reduce damage we sustain. Not immunity. Not hubris. Just prudence.
+
+R&Duck is not a security product with a coverage percentage. Any governance system that claims
+"95% effectiveness" is selling a failing grade — in security, the 5% that gets through is
+the 5% that matters. R&Duck reduces the *incidence* of specific, named failure modes (drift,
+genericness, ungrounded claims, audit theater). It does not provide coverage guarantees.
+
+Treat R&Duck the way you'd treat any prudent engineering practice: it makes failure less likely,
+not impossible. The user who understands this uses the system better than the one who trusts it blindly.

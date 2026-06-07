@@ -128,3 +128,33 @@ Do not just fix the bug. Also:
 
 ---
 *GOV: [AU-01][G25] | VERIFY_BEFORE_USE flag applies to all hallucination-risk APIs*
+
+---
+
+## PROVEN GATE (stronger than "actually runs")
+
+"Actually runs" is filter 1. PROVEN is the release gate.
+A 3% error rate compounded across thousands of decisions is catastrophic.
+The danger isn't spectacular failure — it's slow erosion of quality nobody notices.
+
+```yaml
+PROVEN_STANDARD:
+  level_1_runs:   code executes without errors in the stated environment
+  level_2_correct: code produces expected output on the happy path
+  level_3_proven:  code demonstrated correct on ≥3 cases:
+                   - happy path
+                   - edge case (empty input, zero, null, boundary)
+                   - error case (bad input, missing dependency, network failure)
+
+GATE:
+  routine code:     level 2 minimum (correct on happy path)
+  production code:  level 3 required (proven on 3+ cases)
+  safety-critical:  level 3 + external review recommended
+
+OUTPUT:
+  When delivering code, state which level was verified:
+  [RUNS] | [CORRECT: tested happy path] | [PROVEN: tested N cases — listed below]
+```
+
+This distinction matters because "written and compiles" is not "proven to work."
+The bottleneck in agentic development has moved to testing, not writing.

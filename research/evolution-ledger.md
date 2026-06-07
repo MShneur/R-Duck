@@ -375,3 +375,56 @@ entry_37:
   source: ETH Zurich/LogicStar 2026 — "Evaluating AGENTS.md"
   what_was_kept: the empirical bound (~150-200 instructions) and the principle (load less, not more)
   what_was_rejected: the implication that context files don't help (they do when kept lean)
+
+entry_38:
+  date: 2026-06
+  type: security_integration
+  decision: accept
+  change: Trifecta check added to routing.md — explicit named protocol that fires before
+          ingesting external content. Checks whether session combines private data + untrusted
+          content + external comms. Halts if all three present.
+  source: Simon Willison (coined 2025) — "The lethal trifecta for AI agents"
+  rationale: LOCK-6 stated the rule; trifecta check makes it a triggered protocol with
+          specific actions, not just a rule to remember. Documented exploits against
+          Microsoft 365, GitHub MCP, Slack AI, ChatGPT, and 20+ production systems.
+
+entry_39:
+  date: 2026-06
+  type: worker_addition
+  decision: accept
+  change: Safe-ingest worker (Worker 8) added — Dual LLM pattern applied to R&Duck.
+          Isolated read-only worker for external/untrusted content. No private data,
+          no tools, no external comms. Returns Summary Packet only.
+  source: Willison "Dual LLM pattern" (2023) + IBM/ETH Zurich design patterns paper (2025)
+  rationale: Architecture-level defense against prompt injection. The model that processes
+          untrusted input must never be the same context that holds private data.
+
+entry_40:
+  date: 2026-06
+  type: capability_upgrade
+  decision: accept
+  change: PROVEN gate added to CODE capability — 3-level verification standard
+          (runs → correct → proven on 3+ cases). Production code requires level 3.
+  source: Willison — "the bottleneck has moved to testing" + "97% is a failing grade"
+  rationale: "Actually runs" is necessary but not sufficient. Slow erosion of quality
+          through unverified outputs compounds across decisions.
+
+entry_41:
+  date: 2026-06
+  type: protocol_addition
+  decision: accept
+  change: DRIFT_WATCH added to runtime.md — every 10 turns, compare current output rigor
+          to session-start rigor. Catches normalization of deviance (gradual quality decline).
+  source: Willison/Lenny podcast — "normalization of deviance" concept applied to AI output
+  rationale: Individual outputs can pass quality checks while overall standards quietly decline.
+          Same-model detection has blind spots — acknowledged as honest limit.
+
+entry_42:
+  date: 2026-06
+  type: security_warning
+  decision: accept
+  change: MCP trifecta warning added to routing.md — T2/T3 must audit tool combinations
+          against the trifecta before activation.
+  source: Willison — MCP prompt injection security problems (April 2025), GitHub MCP exploit
+  rationale: A single MCP tool can combine all three trifecta elements. R&Duck recommends MCP
+          at T2/T3 but wasn't warning about the combination risk.
