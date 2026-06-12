@@ -2,7 +2,7 @@
 domain-id: creative-production
 domain-type: analytical-orchestration
 activation: conditional
-activation-trigger: >
+trigger: >
   Story/fiction/screenplay/novel/poem/creative writing/script/game narrative/
   world-building/character development/plot/creative brief/brand story/
   advertising copy/content creation
