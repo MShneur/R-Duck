@@ -2,7 +2,7 @@
 domain-id: technical-analysis
 domain-type: analytical-orchestration
 activation: conditional
-activation-trigger: >
+trigger: >
   Analyse system/review code/audit architecture/security review/
   technical assessment/performance analysis/system design/infrastructure/
   API design/database/cloud/DevOps/AI system evaluation
