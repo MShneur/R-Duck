@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Conformance gate (governance self-check)
+        run: bash conform.sh
+
       - name: Build site (generate index pages + llms-full.txt)
         run: bash build.sh
 
