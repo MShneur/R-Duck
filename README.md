@@ -1,6 +1,6 @@
 # 🦆 R&Duck
 
-**Version: 1.0.2** | Last updated: 2026-06 | [Changelog](CHANGELOG.md)
+**Version: 1.0.3** | Last updated: 2026-06 | [Changelog](CHANGELOG.md)
 
 > *Why did the AI go to therapy? Because it kept finishing everyone's sentences — and none of them were its own thoughts. R&Duck fixes that.*
 
@@ -102,6 +102,7 @@ The `research/evolution-ledger.md` is worth reading if you want to understand wh
 
 | Version | What changed |
 |---|---|
+| **1.0.3** | Integrity release: CI conformance gate (`conform.sh`), MIT LICENSE file, single-sourced VERSION, dead-link/slug fixes, llms-full regeneration |
 | **1.0.2** | Security additions: prompt injection trifecta check, safe-ingest worker, PROVEN code gate, drift detection |
 | **1.0.1** | Site auto-deploy: every push rebuilds `rd.mstep.org` automatically |
 | **1.0.0** | First full release: 36 files, DA/SPAR/BENCH review, DUCK_BUILD institutional memory |
