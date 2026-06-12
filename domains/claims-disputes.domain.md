@@ -2,7 +2,7 @@
 domain-id: claims-disputes
 domain-type: analytical-orchestration
 activation: conditional
-activation-trigger: >
+trigger: >
   Claim/liability/settlement/insurance/coverage/dispute/damages/compensation
 purpose: >
   Structured multi-lens analysis of claims, liability, coverage, and dispute resolution
