@@ -1,5 +1,41 @@
 # R&Duck Changelog
 
+## v1.0.3 — 2026-06 ("The Integrity Release")
+
+The system now governs itself. Theme: runtime governance persistence applied to the repo.
+
+- **conform.sh + CI conformance gate** — every deploy is blocked unless: VERSION is consistent
+  across README/boot/llms.txt/AGENTS.md, CHANGELOG covers the current version, LICENSE exists,
+  the committed `llms-full.txt` matches a fresh regeneration, all `llms.txt` paths resolve,
+  every capability/domain passes G25 front-matter lint, and every rule ID referenced anywhere
+  resolves to a definition in `core/rules.md`. Instruction-ceiling estimate emitted as WARN.
+- **VERSION file** — single source of truth; `build.sh` stamps all generated artifacts from it
+  (previously hardcoded "v1.0.0" in four places, guaranteeing drift).
+- **LICENSE (MIT) added** — was claimed in three files but never present in the repo.
+- **Dead repo-slug fixed** — four files pointed at a hyphen-less repo path that does not exist;
+  normalized to `MShneur/R-Duck`.
+- **Mirror fallback** — AGENTS.md and llms.txt now list `mshneur.github.io/R-Duck`, removing the
+  single point of failure on the custom domain.
+- **T1 signal hardened (boot.md)** — a pasted/embedded copy of boot.md no longer qualifies as
+  fetch-verified T1; demonstrated fetch capability this session is required.
+- **Committed `llms-full.txt` regenerated** — was stale at pre-1.0.2 content (missing
+  DRIFT_WATCH, trifecta additions) for anyone cloning or reading raw.githubusercontent.
+- Backfilled v1.0.1 and v1.0.2 changelog entries (previously only in README table + ledger).
+
+## v1.0.2 — 2026-06 (backfilled)
+
+Security additions from Willison research integration (evolution ledger entries 38–42):
+- Trifecta check — private data + untrusted content + external comms flagged as injection vector
+- Safe-ingest worker — Dual LLM isolation pattern for untrusted content
+- PROVEN gate in CODE capability — runs → correct → proven-on-3-cases ladder
+- DRIFT_WATCH in runtime.md — 10-turn rigor comparison against session start
+- MCP trifecta warning in routing.md — T2/T3 tool-combination audit
+
+## v1.0.1 — 2026-06 (backfilled)
+
+- GitHub Actions CI/CD — every push to main rebuilds and redeploys the site
+- build.sh — generates root activator page, directory indexes, llms-full.txt, .nojekyll
+
 ## v1.0.0 — 2026-06 ("The Grounded Producer Release")
 
 First production release. 33 files, ~80KB.
