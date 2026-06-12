@@ -2,7 +2,7 @@
 domain-id: public-communication
 domain-type: analytical-orchestration
 activation: conditional
-activation-trigger: >
+trigger: >
   Draft/write/create/compose/statement/press release/speech/op-ed/announcement/
   blog/tweet/post/message/letter/email when audience is external or public-facing
 purpose: >
