@@ -2,7 +2,7 @@
 domain-id: crisis-response
 domain-type: analytical-orchestration
 activation: conditional
-activation-trigger: >
+trigger: >
   Crisis/breach/recall/incident/emergency/accident/failure/contamination/
   cyberattack/scandal/data_breach/product_failure/environmental_incident
 purpose: >
