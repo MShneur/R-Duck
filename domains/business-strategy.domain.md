@@ -2,7 +2,7 @@
 domain-id: business-strategy
 domain-type: analytical-orchestration
 activation: conditional
-activation-trigger: >
+trigger: >
   Market/strategy/business model/growth/competitive/M&A/pricing/
   go-to-market/partnership/expansion/investment/pivot/launch
 purpose: >
