@@ -2,7 +2,7 @@
 domain-id: legal-strategy
 domain-type: analytical-orchestration
 activation: conditional
-activation-trigger: >
+trigger: >
   Legal strategy/sue/litigate/motion/regulatory strategy/enforce/contract/
   negotiate/settlement/compliance program/legal opinion/jurisdiction
 purpose: >
