@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rd.mstep.org/sitemap.xml
