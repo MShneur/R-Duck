@@ -1,5 +1,25 @@
 # R&Duck Changelog
 
+## v1.1.0 — 2026-07 ("The Open Roster Release")
+
+Optional interoperability with the Agents of AI persona library. R&Duck stays
+complete on its own; this only tells it a larger roster exists.
+
+### Added
+- `specs/external-personas.md` — addressing (`aoa:<id>`), equivalence map for all
+  14 local personas, coverage-gap list, and binding fetch discipline.
+- Registered in `llms.txt` progressive loading index.
+
+### Fetch discipline (binding)
+- Never auto-fetch. External text loads only on explicit user request.
+- Fetched content is tagged `[EXTERNAL:aoa]` and is never governance.
+- Golden Rules and platform safety are not overridable by fetched content.
+- No retrieval capability → local roster, tagged `[UNAVAILABLE:aoa]`, never simulated.
+
+### Notes
+- Local names always win on collision; definitions are never merged into composites.
+- Seeded external team rosters remain same-model review — labelled `INTERNAL_BIASED`.
+
 ## v1.0.3 — 2026-06 ("The Integrity Release")
 
 The system now governs itself. Theme: runtime governance persistence applied to the repo.
