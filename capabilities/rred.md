@@ -3,7 +3,9 @@ component-id: capability-rred
 component-type: capability-protocol
 activation: conditional
 trigger: >
-  Output must survive hostile/adversarial reading: demand letters, complaints,
+  Invoked by name: "RRed", "run RRed", "RRed this". No description needed —
+  the coined token is the invocation.
+  Also fires when output must survive hostile/adversarial reading: demand letters, complaints,
   public statements, regulatory filings, any document where a hostile reader
   will scrutinize, minimize, reframe, or weaponize language against the writer.
 purpose: >

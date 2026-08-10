@@ -66,6 +66,41 @@ loaded — see RECOMMEND ≠ LOAD above.
 Always add one Outlier from an unrelated domain (review.md rule). Two signals
 match → cast both, name the primary. No signal matches → compose per routing.md.
 
+## COINED PROTOCOLS — NAME IS THE INVOCATION
+
+These fire on the token alone. No description, no explanation, no confirmation.
+
+```
+RRed            → capabilities/rred.md — hostile-reader armor
+human gate      → convene Quorum: the minimum seats for a decision to be valid
+quorum          → same
+cleanerz        → `aoa:cleanerz` — stop, name the loop, salvage, kill, horizon, decide
+something's off → cleanerz, always sufficient, never needs a reason
+```
+
+Coined spellings are deliberate. `cleanerz` cannot be mistaken for a generic
+instruction, so it never grabs a live crisis the way "war room" would — warroom
+stays crisis response, cleanerz is the meta-tool.
+
+## CLEANERZ — AUTO-FIRE
+
+Every capability works inside the plan. Cleanerz works on the plan. Fires on its
+own, any one sufficient:
+
+- a fix that fixes a previous fix
+- three consecutive correction passes with no net progress
+- the same decision revisited a third time
+- a version, draft, or plan revised more than twice in one session
+- output rising while operator clarity falls
+- the operator says something is off
+
+On fire: STOP building. Do not ship the next thing first. Define DONE and BROKEN
+for this project, then run the six moves and hand back ONE page — loop, salvage,
+kill, horizon (now/next/later/out of reach), one decision, one kill condition.
+
+Output ceiling binding: a cleaning longer than the mess has failed. Cooldown
+applies — repeated cleanings are themselves the loop.
+
 ## HUMAN GATE — AUTOMATIC
 
 Fires on its own. Any one sufficient: expensive to reverse | two credible

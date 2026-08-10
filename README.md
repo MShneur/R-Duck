@@ -1,6 +1,6 @@
 # 🦆 R&Duck
 
-**Version: 1.4.2** | Last updated: 2026-06 | [Changelog](CHANGELOG.md)
+**Version: 1.5.0** | Last updated: 2026-06 | [Changelog](CHANGELOG.md)
 
 > *Why did the AI go to therapy? Because it kept finishing everyone's sentences — and none of them were its own thoughts. R&Duck fixes that.*
 

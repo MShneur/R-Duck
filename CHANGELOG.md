@@ -1,5 +1,28 @@
 # R&Duck Changelog
 
+## v1.5.0 — 2026-08 ("The Name Is the Invocation")
+
+### Added
+- **Coined protocol table** in `core/autocast.md`. `RRed`, `human gate`, `quorum`,
+  `cleanerz` and `something's off` now fire on the token alone. No description, no
+  confirmation, no asking what the user meant. `AG-13` makes that binding.
+- **Cleanerz auto-fire.** Every capability works inside the plan; cleanerz works on
+  the plan. Triggers: a fix that fixes a fix, three corrections with no net
+  progress, the same decision revisited a third time, more than two revisions in a
+  session, output rising while operator clarity falls, or the operator saying
+  something is off. On fire, building stops — the next thing does not ship first.
+- **Quorum** — coined name for the assembled decision body. The minimum seats for
+  a decision to be valid; an incomplete quorum produces no decision, not a weak one.
+
+### Changed
+- `capabilities/rred.md` was only reachable by describing when it applied. It is
+  now invocable by name.
+
+### Note on the coined spelling
+`cleanerz` is deliberate. A generic word would collide: "war room" risks grabbing a
+live crisis instead of a process loop, and "audit" already routes to five
+destinations across these systems. A coined token routes to exactly one place.
+
 ## v1.4.2 — 2026-08 (C10 measures the right thing)
 
 ### Fixed
