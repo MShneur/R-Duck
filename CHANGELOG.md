@@ -1,5 +1,32 @@
 # R&Duck Changelog
 
+## v1.2.0 — 2026-08 ("The Short Answer Release")
+
+R&Duck is used hands-free and read aloud. The default output is now a spoken
+answer, not a document. Depth is requested, never assumed.
+
+### Added
+- `core/voice.md` — always-loaded output contract. Answer first, 3-5 sentences,
+  prose by default. Fenced blocks reserved for paste-bound content. Explicit
+  depth ladder: EXPAND / SHOW ME / FULL / WHY.
+- `OD-04` voice-first default, `OD-05` depth is opt-in, `OD-06` one artifact per
+  turn (no answer-plus-duplicate-block).
+
+### Changed
+- **`AD-02` reversed.** Previously: two compactness failures escalated to
+  *code-block-first*. That rule was itself producing the failure it was meant to
+  catch — user impatience was answered with a larger, fence-wrapped object that
+  reads as noise under text-to-speech. Compression now escalates downward
+  (5 sentences → 3 → one line).
+- `core/boot.md` activation sequence step 10 declares the voice contract at load.
+- `build.sh` and `llms.txt` register `core/voice.md` as always-loaded.
+
+### Unchanged
+- Strategic Briefs, Handoff schemas (HC-01), Summary Packets, BENCH verdicts and
+  conformance output keep their structures — archival artifacts, not answers.
+- Brevity is a format constraint only. Dissent (AD-03), confidence tags, named
+  blockers, and failures are never dropped to save room.
+
 ## v1.1.0 — 2026-07 ("The Open Roster Release")
 
 Optional interoperability with the Agents of AI persona library. R&Duck stays
