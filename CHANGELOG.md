@@ -1,5 +1,35 @@
 # R&Duck Changelog
 
+## v1.4.0 — 2026-08 ("Name It When It Breaks")
+
+Autocast decides who works. This decides what happens when the work goes wrong.
+
+### Added
+- `FAILURE_WATCH` in `core/runtime.md` — event-triggered detection for six named
+  failure modes, each with a mechanical signal and a fix. Silent completion, cycle
+  lock, premature convergence, constraint decay, orthogonal edit, authority
+  laundering. Distinct from DRIFT_WATCH, which is periodic and measures erosion;
+  this fires on a specific signature and halts.
+- `AG-12` — a failure signal halts work. Naming it afterward in a summary is a
+  violation, not a disclosure.
+
+### Changed
+- `conform.sh` C11 now also resolves `aoa:` references in `core/runtime.md`, so
+  every external id in the load path is gated, not just the ones in autocast.
+
+### Fixed
+- C10 was undercounting. It measured `boot + rules + runtime` and had never been
+  updated when `voice.md` and `autocast.md` were added to the always-loaded path.
+  Real figure is 326 content-lines against an AD-04 ceiling of ~150-200 — the
+  ceiling has been exceeded for two releases and the gate could not see it.
+  C10 remains WARN-only; the trim is a separate decision, deliberately not bundled
+  into this release.
+
+### Honest limit
+FAILURE_WATCH catches signatures, not causes. A failure with no signature in the
+table passes unseen. Absence of a flag is not evidence of a clean run — this is
+stated in the file itself so it cannot be read as a guarantee.
+
 ## v1.3.0 — 2026-08 ("Stop Asking Me")
 
 The user should never have to suggest a persona, a workflow, or a review gate.

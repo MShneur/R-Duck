@@ -107,6 +107,7 @@ echo "— C11 autocast id resolution —"
 if python3 - <<'C11PY'
 import re,sys,pathlib,urllib.request,json
 cast=pathlib.Path('core/autocast.md').read_text()
+extra=pathlib.Path('core/runtime.md').read_text()
 pers=pathlib.Path('libraries/personas.md').read_text()
 local={m.group(1) for m in re.finditer(r'^([a-z_]+):\s', pers.split('INCLUDED PERSONAS')[1], re.M)}
 rows=[l for l in cast.splitlines() if l.startswith('|') and not l.startswith('|---') and 'Task signal' not in l]
@@ -116,6 +117,7 @@ for r in rows:
     for c in cells[1:3]:
         ua|=set(re.findall(r'`aoa:([a-z0-9-]+)`', c))
         ul|=set(re.findall(r'(?<!`)\b([a-z_]{4,})\b(?!`)', re.sub(r'`aoa:[a-z0-9-]+`','',c)))
+ua|=set(re.findall(r'`aoa:([a-z0-9-]+)`', extra))
 ul-={'and','the'}
 bad=sorted(ul-local)
 if bad:
@@ -127,7 +129,7 @@ try:
     tok=os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if tok: rq.add_header("Authorization","token "+tok)
     d=json.load(urllib.request.urlopen(rq,timeout=10))
-    live={m.group(2) for m in (re.match(r'(agents|personas|modes|teams|techniques|workflows)/(.+)\.md$',t['path']) for t in d['tree']) if m}
+    live={m.group(2) for m in (re.match(r'(agents|personas|modes|teams|techniques|workflows|failures)/(.+)\.md$',t['path']) for t in d['tree']) if m}
     ba=sorted(ua-live)
     if ba:
         print("      aoa: ids missing from live library: "+", ".join(ba)); sys.exit(1)
@@ -139,10 +141,10 @@ C11PY
 then pass "C11 autocast ids resolve"; else fail "C11 autocast references an id that does not exist"; fi
 
 # ── C10: instruction-ceiling estimate (AD-04 — WARN only) ──────────────────
-CORE_LINES=$(cat core/boot.md core/rules.md core/runtime.md 2>/dev/null | grep -cE '^[^#`]*[a-zA-Z]')
+CORE_LINES=$(cat core/boot.md core/rules.md core/voice.md core/autocast.md core/runtime.md 2>/dev/null | grep -cE '^[^#`]*[a-zA-Z]')
 MAX_DOM=$(wc -l domains/*.md | sort -n | tail -2 | head -1 | awk '{print $1}')
 MAX_CAP=$(wc -l capabilities/*.md | sort -n | tail -2 | head -1 | awk '{print $1}')
-warn "C10 load-path size (info): core≈${CORE_LINES} content-lines + largest domain ${MAX_DOM} + largest capability ${MAX_CAP} lines. AD-04 ceiling ~150-200 ACTIVE instructions — keep progressive loading honest."
+warn "C10 always-loaded size: core≈${CORE_LINES} content-lines + largest domain ${MAX_DOM} + largest capability ${MAX_CAP} lines. AD-04 ceiling ~150-200 ACTIVE instructions — keep progressive loading honest."
 
 echo "═══════════════════════"
 if [ "$FAIL" = 0 ]; then echo "VERDICT: SHIP ✓"; exit 0

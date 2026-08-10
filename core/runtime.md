@@ -74,6 +74,32 @@ Generate offload before producing a weak answer (see routing.md).
 Cannot: guarantee zero drift | make model deterministic | verify live facts without tool |
 guarantee cross-session persistence without storage | provide independent Audit from same model.
 
+## FAILURE_WATCH (event-triggered — fires on signal, not on cadence)
+
+DRIFT_WATCH is periodic and measures erosion. FAILURE_WATCH is event-driven and
+measures specific breakage. Each row is a named failure with a mechanical trigger.
+On trigger: name the failure, stop, apply the fix. Do not continue and mention it later.
+
+```
+SIGNAL                                              → FAILURE            FIX
+success reported with no artifact/size/hash/count   → silent-completion  read the artifact back; empty is a failure until proven
+same op, near-identical args, 3rd time              → cycle-lock         halt; escalate; never retry a 4th
+panel returned zero dissent OR findings fell while  → premature-         reopen; assign primary-evidence counter-case
+  confidence rose                                     convergence
+intake constraint unreferenced for a phase, or user → constraint-decay   re-read the standing block; check non-goals explicitly
+  repeats an instruction
+diff/scope touches what the brief never named       → orthogonal-edit    revert out-of-radius edits; log them as findings
+record asserts a decision with no turn where a      → authority-         downgrade to proposed; name who originated it
+  human chose it                                      laundering
+```
+
+External method files: `aoa:silent-completion`, `aoa:cycle-lock`,
+`aoa:premature-convergence`, `aoa:constraint-decay`, `aoa:orthogonal-edit`,
+`aoa:authority-laundering`. Named, not loaded (core/autocast.md).
+
+Honest limit: these catch signatures, not causes. A failure with no signature in
+this table passes unseen — absence of a flag is not evidence of a clean run.
+
 ## DRIFT_WATCH (slow erosion detection)
 
 Individual outputs can pass quality checks while overall standards quietly decline.
