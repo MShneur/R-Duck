@@ -1,4 +1,4 @@
-# R&Duck v1.4.1 — Progressive Loading Index
+# R&Duck v1.4.2 — Progressive Loading Index
 # Scan this first (~50 tokens/section). Fetch only what the task needs. AD-04: ≤150-200 instructions.
 
 ## Core (always loaded)
@@ -34,7 +34,7 @@
 ## Top-level
 /AGENTS.md | CLAIM_BOUNDARY.md | README.md | WIKI.md | CHANGELOG.md
 
-version: 1.4.1 | updated: 2026-08 | license: MIT | repo: github.com/MShneur/R-Duck
+version: 1.4.2 | updated: 2026-08 | license: MIT | repo: github.com/MShneur/R-Duck
 
 ## One-Shot Full Load
 /llms-full.txt  — ALL core + capability protocols concatenated (~67KB, ~1700 lines)

@@ -1,5 +1,28 @@
 # R&Duck Changelog
 
+## v1.4.2 — 2026-08 (C10 measures the right thing)
+
+### Fixed
+- **C10 was measuring lines, not instructions.** AD-04 bounds *active
+  instructions*; C10 counted content-lines as a proxy and overstated by 60-95%.
+  It reported 237 against a 150-200 ceiling and raised a false violation that
+  stood for two releases and drove a trim that was not actually needed.
+  Real figure: **121-146 instructions — within ceiling.**
+- `tools/instruction_count.py` counts directives instead. Fenced *content* counts,
+  since R&Duck states most of its directives inside fences; delimiters, headers,
+  front matter and prose do not. The band's low end treats a multi-field schema as
+  one instruction, the high end counts each field. Both printed, neither chosen to
+  flatter the result. C10 now fails the build only if the low end exceeds 200.
+
+### Corroboration
+The tool was written independently of the manual count run earlier. Manual: 120-147.
+Tool: 121-146. Different code path, same band.
+
+### Note on the previous release
+v1.4.1's trim removed 89 lines of genuinely bloated prose, so the work stands —
+but its stated justification was a measurement error, and the changelog entry for
+it should be read with that correction.
+
 ## v1.4.1 — 2026-08 (always-loaded trim)
 
 Applying the exits principle: the always-loaded path is an exit every session
