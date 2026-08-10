@@ -11,7 +11,7 @@ VERSION=$(cat VERSION 2>/dev/null || echo MISSING)
 echo "Generating llms-full.txt..."
 printf '# R&Duck v%s — Full Protocol (Single-File Load)\n# Auto-generated on deploy. Individual files at the site root.\n' "$VERSION" > llms-full.txt
 
-for f in core/boot.md core/rules.md core/voice.md core/runtime.md core/routing.md core/continuity.md core/review.md; do
+for f in core/boot.md core/rules.md core/voice.md core/autocast.md core/autocast.md core/runtime.md core/routing.md core/continuity.md core/review.md; do
   [ -f "$f" ] && { echo -e "\n# ═══ FILE: $f ═══"; cat "$f"; } >> llms-full.txt
 done
 for dir in capabilities specs; do

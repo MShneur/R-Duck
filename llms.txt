@@ -1,10 +1,11 @@
-# R&Duck v1.2.0 — Progressive Loading Index
+# R&Duck v1.3.0 — Progressive Loading Index
 # Scan this first (~50 tokens/section). Fetch only what the task needs. AD-04: ≤150-200 instructions.
 
 ## Core (always loaded)
 /core/boot.md          — activation, session profile, autonomy levels, vocabulary
 /core/rules.md         — Golden Rule Index (invariants only, single policy source)
 /core/voice.md         — output contract: voice-first brevity, depth-on-request (OD-04/05/06)
+/core/autocast.md      — automatic cast/workflow/gate selection at intake (AG-10)
 
 ## Core (load as needed)
 /core/runtime.md       — freshness, confidence, persistence, re-anchoring, state blocks
@@ -33,7 +34,7 @@
 ## Top-level
 /AGENTS.md | CLAIM_BOUNDARY.md | README.md | WIKI.md | CHANGELOG.md
 
-version: 1.2.0 | updated: 2026-08 | license: MIT | repo: github.com/MShneur/R-Duck
+version: 1.3.0 | updated: 2026-08 | license: MIT | repo: github.com/MShneur/R-Duck
 
 ## One-Shot Full Load
 /llms-full.txt  — ALL core + capability protocols concatenated (~67KB, ~1700 lines)

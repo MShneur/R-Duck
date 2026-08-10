@@ -8,6 +8,15 @@ SPAR   default  2-4 auto-cast + Outlier + DA        one finding each + quick ver
 BENCH  heavy    full auto-cast panel, independent    debate + judge verdict + adaptive stop
 ```
 
+## DECORRELATION GATE [AG-11 — precedes every tier]
+A check counts only if the checker differs from the author on a NAMED axis:
+engine | framing (test against the brief, not the draft) | evidence (return to primary
+sources) | direction (work backward from the conclusion) | stake (rewarded for finding
+a defect). None applies → it is SELF-CONFIRMATION. Say so. Do not report it as verified.
+SPAR needs one axis. BENCH needs two, one of which must be evidence.
+Confidence rising while findings fall = agreement measured, not correctness.
+External method: `aoa:error-decorrelation`.
+
 ## DA (Devil's Advocate)
 One adversarial pass. Finds the single strongest objection.
 Output: the objection + what changes if it's right.

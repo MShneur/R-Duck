@@ -99,6 +99,45 @@ while read -r id; do
 done <<< "$REFERENCED"
 [ "$C9_OK" = 1 ] && pass "C9 every referenced rule ID resolves to core/rules.md"
 
+# ── C11: autocast id resolution (AG-10 — cast names must exist) ────────────
+# Turn-1 audit found AoA had outgrown both integration maps. This check makes that
+# class of drift a build failure instead of a discovery. Local ids are enforced
+# offline; aoa: ids are checked against the live library when the network allows.
+echo "— C11 autocast id resolution —"
+if python3 - <<'C11PY'
+import re,sys,pathlib,urllib.request,json
+cast=pathlib.Path('core/autocast.md').read_text()
+pers=pathlib.Path('libraries/personas.md').read_text()
+local={m.group(1) for m in re.finditer(r'^([a-z_]+):\s', pers.split('INCLUDED PERSONAS')[1], re.M)}
+rows=[l for l in cast.splitlines() if l.startswith('|') and not l.startswith('|---') and 'Task signal' not in l]
+ul=set(); ua=set()
+for r in rows:
+    cells=[c.strip() for c in r.strip('|').split('|')]
+    for c in cells[1:3]:
+        ua|=set(re.findall(r'`aoa:([a-z0-9-]+)`', c))
+        ul|=set(re.findall(r'(?<!`)\b([a-z_]{4,})\b(?!`)', re.sub(r'`aoa:[a-z0-9-]+`','',c)))
+ul-={'and','the'}
+bad=sorted(ul-local)
+if bad:
+    print("      local persona ids not in libraries/personas.md: "+", ".join(bad)); sys.exit(1)
+try:
+    import os
+    u="https://api.github.com/repos/MShneur/Agents-of-AI/git/trees/main?recursive=1"
+    rq=urllib.request.Request(u)
+    tok=os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if tok: rq.add_header("Authorization","token "+tok)
+    d=json.load(urllib.request.urlopen(rq,timeout=10))
+    live={m.group(2) for m in (re.match(r'(agents|personas|modes|teams|techniques|workflows)/(.+)\.md$',t['path']) for t in d['tree']) if m}
+    ba=sorted(ua-live)
+    if ba:
+        print("      aoa: ids missing from live library: "+", ".join(ba)); sys.exit(1)
+    print(f"      {len(ul)} local + {len(ua)} aoa ids resolve (live library: {len(live)})")
+except Exception as e:
+    print(f"      local ids OK; aoa: check skipped (offline: {type(e).__name__})")
+sys.exit(0)
+C11PY
+then pass "C11 autocast ids resolve"; else fail "C11 autocast references an id that does not exist"; fi
+
 # ── C10: instruction-ceiling estimate (AD-04 — WARN only) ──────────────────
 CORE_LINES=$(cat core/boot.md core/rules.md core/runtime.md 2>/dev/null | grep -cE '^[^#`]*[a-zA-Z]')
 MAX_DOM=$(wc -l domains/*.md | sort -n | tail -2 | head -1 | awk '{print $1}')

@@ -19,6 +19,11 @@ OD-03: Fits in 5 bullets → do not exceed 5. Compression over volume.
 OD-04: Voice-first default. Answer first, 3-5 sentences of prose. No headers, tables,
        or nested structure unless depth was requested. See core/voice.md.
 OD-05: Depth is opt-in. EXPAND | SHOW ME | FULL | WHY raise it. Never volunteer long form.
+AG-10: Autocast is mandatory. Name the cast, workflow and review tier at intake without
+       being asked. A user naming a persona or requesting a committee is an autocast failure.
+AG-11: Verification requires decorrelation. A review pass counts only if the checker differs
+       from the author on a named axis (engine, framing, evidence, direction, stake).
+       Otherwise label it self-confirmation, not verification.
 OD-06: One artifact per turn. Never emit an answer plus a duplicate full-text block.
        Code fences are for paste-bound content only — never for prose or summaries.
 

@@ -1,5 +1,27 @@
 # R&Duck Changelog
 
+## v1.3.0 — 2026-08 ("Stop Asking Me")
+
+The user should never have to suggest a persona, a workflow, or a review gate.
+
+### Added
+- `core/autocast.md` — fires at intake, names cast + workflow + review tier in one
+  line, then works. Signal map covers build, debug, research, audit, decide, scope,
+  write, stuck, post-mortem and external-ingest. Human Gate fires on its own at
+  consequential forks; routine ambiguity gets an assumption with a named owner
+  instead of a question back to the user.
+- `AG-10` autocast mandatory, `AG-11` verification requires decorrelation.
+- Decorrelation gate in `core/review.md`, ahead of DA/SPAR/BENCH. A check counts
+  only if the checker differs from the author on a named axis — engine, framing,
+  evidence, direction or stake. Otherwise it is self-confirmation, not verification.
+  SPAR needs one axis; BENCH needs two, one being evidence.
+
+### Changed
+- `specs/external-personas.md` — naming an `aoa:` id is explicitly not loading it.
+  Autocast recommends from a local map with no fetch and no injection surface;
+  the gate stays on ingestion. This removes the friction without weakening
+  fetch discipline.
+
 ## v1.2.0 — 2026-08 ("The Short Answer Release")
 
 R&Duck is used hands-free and read aloud. The default output is now a spoken
