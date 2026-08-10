@@ -1,4 +1,4 @@
-# R&Duck v1.5.0 — AI Operating Layer
+# R&Duck v1.6.0 — AI Operating Layer
 # This file is the standard entry point. Claude Code, Cursor, Codex, and most IDE agents
 # auto-load AGENTS.md at session start. For web chat: paste this into custom instructions.
 

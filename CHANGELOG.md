@@ -1,5 +1,40 @@
 # R&Duck Changelog
 
+## v1.6.0 — 2026-08 ("One Word Per Concept")
+
+### Added
+- `specs/vocabulary.md` — ten concepts, one approved word each, synonyms forbidden
+  by name. Derived from this repository's own corpus rather than adopted from an
+  external dictionary: ambiguity measured as WordNet sense count, offset by
+  entrenchment, log-damped so a common but hopelessly polysemous word cannot buy
+  its way in. Approved: verify, trigger, halt, output, fetch, choose, write,
+  delete, must, never.
+- `tools/vocab_check.py` and conformance check **C12**, enforced as a one-way
+  ratchet. It does not fail on the 352 pre-existing uses; it fails when a scope's
+  count rises. Improvements tighten the baseline so they cannot be lost later.
+  Negative-tested: adding one sentence with three forbidden terms fails the gate.
+
+### Why this exists
+Live counts before the spec: check 75, test 78, verify 25, confirm 12 — four
+words for one concept in governance text. run 38, trigger 36, fire 4, invoke 3.
+output 100, state 70, report 25, say 16. An agent reading `AG-11` had to guess
+whether "check" meant the same thing as "verify" two rules above it. It cannot
+ask, and the guess is invisible.
+
+### Recorded, not hidden
+A first derivation scored on ambiguity alone and selected `ensure`, `cease` and
+`disallow` — three words with zero uses in this repository — demanding 829
+rewrites to vocabulary the system had never spoken. It optimised clarity while
+ignoring migration cost. The scoring in the spec is the correction.
+
+`write` won over `log` on entrenchment despite carrying more senses. If it proves
+ambiguous in practice it is the first term to revisit.
+
+### Note
+No external specification was reproduced. The practice of one approved word per
+concept is not itself anyone's property; the term list here is computed from this
+repository's text.
+
 ## v1.5.0 — 2026-08 ("The Name Is the Invocation")
 
 ### Added

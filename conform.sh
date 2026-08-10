@@ -140,6 +140,14 @@ sys.exit(0)
 C11PY
 then pass "C11 autocast ids resolve"; else fail "C11 autocast references an id that does not exist"; fi
 
+# ── C12: controlled vocabulary ratchet (specs/vocabulary.md) ───────────────
+# Does not fail on the 352 pre-existing uses. Fails when a scope's count RISES,
+# which means a new forbidden synonym entered instruction text. When a scope
+# improves, the baseline tightens so the gain cannot be lost later.
+echo "— C12 controlled vocabulary —"
+if python3 tools/vocab_check.py; then pass "C12 vocabulary ratchet held or tightened"
+else fail "C12 a forbidden synonym was introduced — see specs/vocabulary.md"; fi
+
 # ── C10: instruction ceiling (AD-04 — WARN only) ───────────────────────────
 echo "— C10 instruction ceiling —"
 if python3 tools/instruction_count.py; then
