@@ -141,10 +141,12 @@ C11PY
 then pass "C11 autocast ids resolve"; else fail "C11 autocast references an id that does not exist"; fi
 
 # ── C10: instruction-ceiling estimate (AD-04 — WARN only) ──────────────────
-CORE_LINES=$(cat core/boot.md core/rules.md core/voice.md core/autocast.md core/runtime.md 2>/dev/null | grep -cE '^[^#`]*[a-zA-Z]')
+ALWAYS=$(awk '/^## Core \(always loaded\)/{f=1;next} /^## /{f=0} f' llms.txt | grep -oE '^/core/[a-z-]+\.md' | sed 's|^/||')
+CORE_LINES=$(cat $ALWAYS 2>/dev/null | grep -cE '^[^#`]*[a-zA-Z]')
+CORE_FILES=$(echo $ALWAYS | tr ' ' ',')
 MAX_DOM=$(wc -l domains/*.md | sort -n | tail -2 | head -1 | awk '{print $1}')
 MAX_CAP=$(wc -l capabilities/*.md | sort -n | tail -2 | head -1 | awk '{print $1}')
-warn "C10 always-loaded size: core≈${CORE_LINES} content-lines + largest domain ${MAX_DOM} + largest capability ${MAX_CAP} lines. AD-04 ceiling ~150-200 ACTIVE instructions — keep progressive loading honest."
+warn "C10 always-loaded (${CORE_FILES}): ${CORE_LINES} content-lines + largest domain ${MAX_DOM} + largest capability ${MAX_CAP} lines. AD-04 ceiling ~150-200 ACTIVE instructions — keep progressive loading honest."
 
 echo "═══════════════════════"
 if [ "$FAIL" = 0 ]; then echo "VERDICT: SHIP ✓"; exit 0

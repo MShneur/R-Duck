@@ -1,5 +1,33 @@
 # R&Duck Changelog
 
+## v1.4.1 — 2026-08 (always-loaded trim)
+
+Applying the exits principle: the always-loaded path is an exit every session
+pays for, so it gets the smallest form that delivers the value.
+
+### Fixed
+- **C10 was wrong twice.** It originally measured `boot + rules + runtime`, a
+  hardcoded list that never updated when `voice.md` and `autocast.md` were added.
+  The first correction added those two but left `runtime.md` in, which `llms.txt`
+  declares load-as-needed. C10 now derives its file set from the "Core (always
+  loaded)" section of `llms.txt` — there is no hardcoded list left to drift.
+  Reported figures: 203 (wrong), 326 (wrong the other way), 237 (real).
+
+### Changed
+- `core/voice.md` 53 → 45 content-lines, `core/autocast.md` 70 → 59. Prose
+  compression only — no rule removed, no trigger weakened, no signal-map row cut.
+  A verbose brevity contract was self-refuting.
+
+### Still over
+237 against an AD-04 ceiling of ~150-200. Closing the remaining gap means cutting
+`boot.md` or `rules.md` — the activation sequence and the constitution — which is
+an architectural decision, not a cleanup. Deliberately not done here.
+
+Open question: AD-04 bounds *active instructions*; C10 counts *content-lines* as a
+proxy. Tables, examples and prose inflate that proxy, so 237 lines is not 237
+instructions. Changing the metric would make the number look better, which is
+exactly why it is being raised as a question rather than quietly applied.
+
 ## v1.4.0 — 2026-08 ("Name It When It Breaks")
 
 Autocast decides who works. This decides what happens when the work goes wrong.
