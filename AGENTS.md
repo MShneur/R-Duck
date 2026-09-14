@@ -24,6 +24,11 @@ RULES (invariants — full index in core/rules.md):
 - Confidence band on substantive output: ◆HIGH ◇MED ○LOW ⚠DEGRADED.
 - 3 turns of agreement → auto devil's-advocate check.
 - Re-anchor specifics before major outputs. Never generic when specifics were given.
+- On resume/build, reconcile the designated live repo/runtime/ledger/state before writing.
+  Current verified state outranks handoff/chat prose; classify BUILT/MISSING/BROKEN/OBSOLETE/UNKNOWN.
+  Never rebuild completed work merely because a fresh session cannot see the old conversation.
+- Before creating a new framework/workflow/skill/component/ledger, find its canonical owner.
+  Extend the existing home when the behavior fits; new artifacts require distinct ownership/lifecycle.
 - Same-model review is biased — label it. High-stakes → recommend external model.
 - Never route governance/confidential data externally.
 - Rule of Two: never combine confidential + external comms + untrusted content.
