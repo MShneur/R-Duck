@@ -18,24 +18,46 @@ version: 1.0 | handoff_number: N | timestamp: ISO8601
 project_id | goal | phase | active_domains | anchor_lenses | autonomy_level
 key_specifics: [...] | obligations: [...] | constraints: [...] | pending: [...]
 confidence_at_handoff | tier | freshness_policy
+# AUTHORITY POINTERS
+canonical_state_sources: [...]   # repo/ledger/runtime/state files to verify on resume
+last_verified_refs: [...]        # commit/job/query/runtime refs, not prose
 # RAW ANCHORS (preserve verbatim — NEVER summarize)
 verbatim_goal: "[exact user words]"
 verbatim_decisions: "[exact words at key decisions]"
 verbatim_constraints: "[exact hard limits stated]"
 critical_context: "[nuance a summary would flatten]"
 # RESUMPTION
-resume: "Re-establish session profile (detect host — don't assume). Re-anchor Core.
-         Continue Phase [X]. First action: [Y]."
+resume: "Re-establish session profile (detect host — don't assume). Reconcile the
+         canonical state sources against this handoff. Continue Phase [X] only from
+         verified current state. First action: [Y]."
 ---END HANDOFF---
 ```
+
+## RESUME RECONCILIATION — REQUIRED
+A handoff is a locator and compression artifact, not the project database.
+Before acting in a fresh session:
+
+1. Resolve `canonical_state_sources` from the handoff/project entrypoint.
+2. Read the current repo/runtime/ledger/state surface directly.
+3. Compare handoff claims against current evidence.
+4. Classify relevant work: `BUILT | MISSING | BROKEN | OBSOLETE | UNKNOWN`.
+5. Preserve current accepted decisions; do not rebuild `BUILT` work.
+6. Surface contradictions explicitly. Current verified state wins over stale prose unless
+   the human deliberately changes the decision.
+7. Only then choose the next action.
+
+If the canonical source cannot be read, declare DEGRADED and stop short of state-changing
+work that depends on it. Do not substitute chat reconstruction for missing authority.
 
 ## LOAD SEQUENCE
 ```
 1. Establish session profile (boot.md — detect host/cutoff — NEVER assume)
-2. Read structured fields → Core
-3. Read raw anchors — preserve verbatim
-4. Declare: "Resuming [project_id] | Phase [X] | Tier [T] | [N] migrations"
-5. If ≥3 migrations → confirm top 3 specifics with user
+2. Resolve and read canonical state sources named by the project/handoff
+3. Reconcile current state vs handoff; classify BUILT/MISSING/BROKEN/OBSOLETE/UNKNOWN
+4. Read structured fields → Core, downgrading anything contradicted by live evidence
+5. Read raw anchors — preserve verbatim
+6. Declare: "Resuming [project_id] | Phase [X] | Tier [T] | [N] migrations"
+7. If ≥3 migrations → confirm top 3 specifics with user
 ```
 
 ## SUMMARY PACKET (Agent → Prime Agent)
@@ -50,15 +72,21 @@ evidence_quality: [per-claim tags]
 PARTIAL/DEGRADED packets do NOT auto-enter Core. Prime validates first.
 
 ## RETRIEVAL HIERARCHY
-L1 user constraints (always win) → L2 Core specifics → L3 active domain →
-L4 anchor anti-goals → L5 pre-training (PRACTICE) → L6 inferred (SPECULATIVE) → L7 prior Handoff (stale risk)
+L1 explicit current user constraints/decisions → L2 current verified canonical state
+(repo/runtime/ledger/state) → L3 Core specifics that do not conflict with L2 →
+L4 active domain → L5 anchor anti-goals → L6 pre-training (PRACTICE) →
+L7 inferred (SPECULATIVE) → L8 prior Handoff/chat summary (stale risk)
+
+A newer paragraph does not outrank a verified executable state merely because it is newer.
+If a human intentionally supersedes the current system, record that decision to the canonical
+state surface before treating it as durable project truth.
 
 ## CONTRADICTION LOG
 ```yaml
 when info conflicts: { turn, source_a + claim_a, source_b + claim_b,
-  resolution: PENDING | USER_CLARIFIED | ANCHOR_GOVERNS | LATEST_WINS }
-Surface active contradictions at the next Decision Gate.
+  resolution: PENDING | USER_CLARIFIED | ANCHOR_GOVERNS | LATEST_WINS | LIVE_STATE_WINS }
 ```
+Surface active contradictions at the next Decision Gate.
 
 # ═══════════════════════════════════════════════
 # PART 2: PSCM (Self-Correction Lens)
