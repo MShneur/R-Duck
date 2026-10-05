@@ -77,7 +77,8 @@ calibration · `aoa:burden` epistemic burden of proof · `aoa:prover` formal log
 `aoa:friction` UX psychology · `aoa:raw-cut` UI/UX frontend · `aoa:midwife` teaching ·
 `aoa:concierge` support de-escalation · `aoa:framesmith` adversarial-resilient comms ·
 `aoa:pipeline` MLOps · `aoa:tracker` hypothesis debugging · `aoa:sieve` candidate
-ranking · `aoa:archaeologist` technical-debt assessment · `aoa:chisel` code quality
+ranking · `aoa:archaeologist` technical-debt assessment · `aoa:chisel` code quality ·
+`aoa:backstitch` portable context-continuity/authority-retrieval method
 
 ## TEAMS → REVIEW LADDER
 
