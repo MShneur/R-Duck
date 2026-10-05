@@ -1,5 +1,15 @@
 # R&Duck Changelog
 
+## 2026-10-05 — Cost-gated continuity / Backstitch alignment
+
+- Added a native **STITCH GATE** to R&Duck continuity: S0 BYPASS, S1 PIN, S2 RECALL, S3 RECONCILE.
+- S0 explicitly performs **zero prior-project retrieval**, preventing continuity machinery from taxing simple questions.
+- Added a compact high-churn project **Stitchboard**: KNOWN / TRIED_WORKED / TRIED_FAILED / NOT_TRIED / DEFERRED / HYPOTHESES / NEXT.
+- Added Stitch Gate to the standard boot path and re-anchor logic.
+- Refined DUCK_BUILD so it checks the Stitchboard/decision index first and retrieves only relevant institutional-memory entries instead of loading the entire evolution ledger and decisions log every build session.
+- Added `aoa:backstitch` as the portable Agents-of-AI reference method without making external fetch a dependency.
+
+
 ## v1.6.0 — 2026-08 ("One Word Per Concept")
 
 ### Added
