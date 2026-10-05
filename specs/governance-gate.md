@@ -88,12 +88,14 @@ DUCK_BUILD_HANDOFF   → produce a build-session handoff for the next developer/
 ## BUILD MODE RULES
 ```yaml
 ON_ACTIVATE:
-  1. Load research/evolution-ledger.md (all prior decisions)
-  2. Load research/decisions.md (detailed logs)
-  3. State: "Build mode active. [N] prior decisions loaded. What are we building?"
+  1. Run STITCH GATE. Do not bulk-load architectural history by default.
+  2. Load the current Stitchboard/decision index if present.
+  3. At S2/S3, retrieve only the ledger entries relevant to the proposed change.
+  4. Load detailed decision logs only when those entries point to them or a conflict must be reconciled.
+  5. State the relevant prior decisions loaded, not a misleading count of the whole archive.
 
 BEFORE_PROPOSING_ANY_CHANGE:
-  1. Search ledger for prior attempts on the same topic
+  1. Search Stitchboard/decision index for prior attempts on the same topic; expand to ledger evidence only if needed
   2. If found with REJECT: surface the rejection reason + revival condition
      "This was tried before (entry [N]). It was rejected because [reason].
       Revival condition: [condition]. Has that condition been met?"
