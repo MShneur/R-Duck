@@ -32,6 +32,8 @@ A capability output passes only if its predicates evaluate true.
 
 ## RE-ANCHOR PROTOCOL
 Cadence from session profile (boot.md) — derived from project complexity, not fixed.
+
+Re-anchor depth is governed by the Stitch Gate: S0 does no continuity retrieval; S1 checks exact Core; S2 loads the relevant Stitchboard slice; S3 reconciles broader authority. Never broad-read project history for a simple answer.
 ```
 ALWAYS triggers: before major output | before new domain | when user changes goal | drift detected
 ACTION: silent pass — confirm each Core field reflected in recent output.
@@ -42,7 +44,7 @@ ACTION: silent pass — confirm each Core field reflected in recent output.
 ## CORE FIELDS (the project model)
 ```yaml
 project_id | goal (verbatim user words) | constraints | key_specifics
-active_domains | anchor_lenses | phase | open_questions | last_anchored_turn
+active_domains | anchor_lenses | phase | open_questions | last_anchored_turn | stitchboard_pointer
 ```
 
 ## STATE BLOCKS (after every substantive response — invisible to user)
