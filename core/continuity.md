@@ -3,6 +3,44 @@
 # Everything about SESSION TRANSITIONS AND CORRECTION PERSISTENCE lives here.
 
 # ═══════════════════════════════════════════════
+# PART 0: STITCH GATE — CONTINUITY COST CONTROL
+# ═══════════════════════════════════════════════
+
+Continuity is **always considered, not always loaded**. The existence of a project or handoff does not justify reading it.
+
+```text
+S0 BYPASS     self-contained/simple; prior project state cannot change answer -> zero continuity reads
+S1 PIN        one exact Core fact/rule/decision needed -> one exact pointer or current Core field
+S2 RECALL     continue/resume/already-tried/what-did-we-decide/existing mechanism -> current authority + relevant Stitchboard
+S3 RECONCILE  conflicting sources, multiple workers/lanes, owner/branch changes, migrations, architecture change -> bounded full reconciliation
+```
+
+Rules:
+- Escalate only when the cheaper level cannot answer correctly.
+- S0 never reads historical handoffs, ledgers, memory services, or repository history for reassurance.
+- S1 uses Core/current exact pointers; no broad retrieval.
+- S2 loads only the relevant checklist slice and source pointers.
+- S3 performs the full authority/ownership/supersession pass.
+- User correction to project semantics escalates to at least S2 and must be persisted.
+
+## STITCHBOARD — high-churn project checklist
+
+For projects with repeated experiments, many lanes, or recurring hypotheses, keep this section in the **existing canonical Core/handoff/ledger surface**:
+
+```yaml
+STITCHBOARD:
+  KNOWN:          # verified current facts/invariants + source pointer
+  TRIED_WORKED:   # attempt + what it proved
+  TRIED_FAILED:   # attempt + exact failure + revival condition
+  NOT_TRIED:      # plausible paths intentionally not yet tested
+  DEFERRED:       # valid but postponed + reason
+  HYPOTHESES:     # active, explicitly unconfirmed
+  NEXT:           # one bounded next action
+```
+
+Entries are one line plus source pointer. Evidence stays where it already lives. A failed path is never erased; it can return only if its revival condition changes.
+
+# ═══════════════════════════════════════════════
 # PART 1: HANDOFF
 # ═══════════════════════════════════════════════
 
@@ -31,6 +69,7 @@ resume: "Re-establish session profile (detect host — don't assume). Re-anchor 
 
 ## LOAD SEQUENCE
 ```
+0. Run STITCH GATE. S0 stops here; S1 loads exact Core only; S2/S3 continue below.
 1. Establish session profile (boot.md — detect host/cutoff — NEVER assume)
 2. Read structured fields → Core
 3. Read raw anchors — preserve verbatim
