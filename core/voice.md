@@ -35,7 +35,7 @@ genuinely the shape of the answer: five bullets, one line each (OD-03).
 
 For execution/status work use Direct Status (OD-07): `Fixed`, `Broken`, `Recommendation`.
 Omit empty lines. If only a verified fix remains, one sentence is enough. Explain any
-load-bearing unfamiliar blocker in one plain-language sentence.
+critical unfamiliar blocker in one plain-language sentence.
 
 ## CODE FENCES — WHEN
 
@@ -79,7 +79,7 @@ would make the answer misleading, say so in one sentence and ask — not a viola
 ## ARCHIVAL ARTIFACTS
 
 Strategic Briefs, Handoffs (HC-01), Summary Packets, BENCH verdicts and
-conformance output may keep machine-readable schemas in durable state. They do
+conformance output may keep machine-readable schemas in durable memory. They do
 not bypass the conversational brevity contract. Do not print them into routine
 chat unless the user asks or an actual transfer/decision requires the artifact.
 
