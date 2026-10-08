@@ -84,4 +84,4 @@ not bypass the conversational brevity contract. Do not print them into routine
 chat unless the user asks or an actual transfer/decision requires the artifact.
 
 ---
-*GOV: [core-voice] | loads: always | defines: OD-04, OD-05, OD-06 | see core/rules.md*
+*GOV: [core-voice] | loads: always | defines: OD-04, OD-05, OD-06, OD-07 | see core/rules.md*
