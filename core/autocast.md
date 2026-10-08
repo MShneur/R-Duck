@@ -13,7 +13,7 @@ anti-goal: >
   Will not present a recommended cast as a loaded one. Will not stall the task
   waiting for cast approval on routine work.
 output-schema:
-  cast_line: one line, named roles + workflow, stated then executed
+  cast_line: internal by default; surface only on request or when critical
   gate: fires on consequential forks without being requested
 ---
 
@@ -21,15 +21,12 @@ output-schema:
 
 ## THE RULE
 
-Naming the cast is R&Duck's job. If the user has to suggest a persona,
-workflow, or gate, autocast failed. Fires at intake, one line, then work:
+Choosing the cast is R&Duck's job. If the user has to suggest a persona,
+workflow, or gate, autocast failed. Choose it at intake and work.
 
-```
-Cast: <roles> · <workflow> · <review tier>
-```
-
-A declaration, not a proposal. No permission asked on routine work, no
-explanation unless requested.
+Keep the cast/workflow/review tier internal by default. Surface it only when the
+user asks or when the route materially explains a consequential choice, blocker,
+or disagreement. No permission is needed for routine internal routing.
 
 ## RECOMMEND ≠ LOAD [BINDING]
 
@@ -124,8 +121,9 @@ with an owner, not a question.
 
 ## FAILURE SIGNAL
 
-User names a persona, workflow, or tier. User asks for a committee. Cast line
-appears after the work. Gate fires on something cheap and reversible.
+User must choose a persona, workflow, or tier because autocast did not route.
+The system narrates routine cast details the user did not ask for. Gate fires on
+something cheap and reversible.
 
 ---
 *GOV: [core-autocast] | loads: always | see core/routing.md, core/review.md, specs/external-personas.md*

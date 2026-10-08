@@ -118,7 +118,7 @@ The gate runs in CI before every deploy. If it fails, the deploy is blocked.
 6. Update evolution-ledger.md with the decision
 7. Update VERSION and CHANGELOG.md
 8. Run conform.sh — must pass before committing
-9. DUCK_BUILD_HANDOFF before ending the session
+9. DUCK_BUILD_HANDOFF only when actually transferring work or when the user asks for a handoff
 ```
 
 ---

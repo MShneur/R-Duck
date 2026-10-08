@@ -1,6 +1,6 @@
 # 🦆 R&Duck
 
-**Version: 1.6.0** | Last updated: 2026-06 | [Changelog](CHANGELOG.md)
+**Version: 1.7.0** | Last updated: 2026-06 | [Changelog](CHANGELOG.md)
 
 > *Why did the AI go to therapy? Because it kept finishing everyone's sentences — and none of them were its own thoughts. R&Duck fixes that.*
 
@@ -15,6 +15,7 @@ Not "chat with an AI." Not "paste a prompt and hope." A structured system where 
 - Tells you when it's uncertain instead of making things up
 - Keeps your project specifics sharp across a long session
 - Hands off cleanly when context fills up
+- Keeps internal orchestration out of routine chat and fixes required verification paths before claiming success
 - Reviews its own work adversarially before showing you
 
 Works on any AI surface — Claude, ChatGPT, Gemini, or any other. Mobile, web, API, IDE.
@@ -73,6 +74,7 @@ Once activated, you talk to it normally. But these shortcuts help:
 
 | Type this | What happens |
 |---|---|
+| **1.7.0** | Direct Status, quiet orchestration, real-transfer-only handoffs, and repair-first verifier integrity |
 | `P` | Proceed to the next step |
 | `DA` | Quick devil's-advocate check — what's wrong with this? |
 | `SPAR` | Auto-assembles a review panel, gives you a verdict |

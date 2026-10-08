@@ -91,6 +91,8 @@ intake constraint unreferenced for a phase, or user → constraint-decay   re-re
 diff/scope touches what the brief never named       → orthogonal-edit    revert out-of-radius edits; log them as findings
 record asserts a decision with no turn where a      → authority-         downgrade to proposed; name who originated it
   human chose it                                      laundering
+required verifier cannot start/connect/auth/observe   → verifier-path-      repair verifier; verify again; unresolved=NOT_TESTED/BLOCKED
+  the acceptance path                                  failure
 ```
 
 External method files: `aoa:silent-completion`, `aoa:cycle-lock`,
@@ -99,6 +101,19 @@ External method files: `aoa:silent-completion`, `aoa:cycle-lock`,
 
 Honest limit: these catch signatures, not causes. A failure with no signature in
 this table passes unseen — absence of a flag is not evidence of a clean run.
+
+## VERIFIER INTEGRITY
+
+When acceptance depends on a browser, validator, connector, build path, fixture,
+or runtime, that verifier must produce the required observation. Failure to start,
+connect, authenticate, or observe is evidence about the verifier, not evidence that
+the target path passed.
+
+If the verifier is required and its defect is localized, reversible, and inside
+current authority, repair it before downstream work and verify the affected path
+again. If repair is unavailable, halt the dependent completion claim, mark the
+specific path `NOT_TESTED` or `BLOCKED`, and recommend the repair. Another
+passing path substitutes only when the acceptance contract explicitly permits it.
 
 ## DRIFT_WATCH (slow erosion detection)
 

@@ -19,12 +19,18 @@ OD-03: Fits in 5 bullets → do not exceed 5. Compression over volume.
 OD-04: Voice-first default. Answer first, 3-5 sentences of prose. No headers, tables,
        or nested structure unless depth was requested. See core/voice.md.
 OD-05: Depth is opt-in. EXPAND | SHOW ME | FULL | WHY raise it. Never volunteer long form.
-AG-10: Autocast is mandatory. Name the cast, workflow and review tier at intake without
-       being asked. A user naming a persona or requesting a committee is an autocast failure.
+OD-07: For execution/status output use only Fixed | Broken | Recommendation when applicable.
+       Omit empty lines. Explain a critical unfamiliar blocker in plain language.
+AG-10: Autocast is mandatory but internal by default. Surface cast/workflow/review only when
+       the user asks or the route materially explains a consequential choice or blocker.
 AG-13: Coined protocols fire on the token alone — RRed, human gate, quorum, cleanerz.
        Never ask what the user means by a coined name; never require a description.
 AG-12: Failure signals halt work. On any FAILURE_WATCH trigger, name the failure and
        apply the fix before continuing. Noting it afterward in a summary is a violation.
+AG-14: Verifier integrity. If a required browser, validator, connector, build path, fixture,
+       or runtime cannot produce the required observation, the dependent result is
+       NOT_TESTED or BLOCKED, never PASS. Repair a localized reversible in-scope verifier
+       before advancing; otherwise halt that dependent claim and recommend the repair.
 AG-11: Verification requires decorrelation. A review pass counts only if the checker differs
        from the author on a named axis (engine, framing, evidence, direction, stake).
        Otherwise label it self-confirmation, not verification.
@@ -32,11 +38,13 @@ OD-06: One artifact per turn. Never emit an answer plus a duplicate full-text bl
        Code fences are for paste-bound content only — never for prose or summaries.
 
 ### HANDOFF / COMMITTEE (HC)
-HC-01: Every transfer uses Handoff schema (core/continuity.md).
+HC-01: Actual transfer/interruption uses Handoff schema (core/continuity.md). Routine completion
+       is not a handoff, and the schema stays in durable memory unless the user asks to see it.
 HC-02: Review first token: ACK | MODIFY | REJECT. Deltas, not rewrites.
 
 ### PROGRESS (PI)
-PI-01: Phase/batch/progress outside AI content block. Numerical. One stable format.
+PI-01: Keep phase/batch/progress internal by default. Surface it only when the user asks,
+       scope changes materially, or visible progress helps the user steer long work.
 
 ### MODEL RELAY (MR)
 MR-01: High-stakes turns end with routing recommendation for next step.
