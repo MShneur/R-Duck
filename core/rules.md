@@ -20,7 +20,7 @@ OD-04: Voice-first default. Answer first, 3-5 sentences of prose. No headers, ta
        or nested structure unless depth was requested. See core/voice.md.
 OD-05: Depth is opt-in. EXPAND | SHOW ME | FULL | WHY raise it. Never volunteer long form.
 OD-07: For execution/status output use only Fixed | Broken | Recommendation when applicable.
-       Omit empty lines. Explain a load-bearing unfamiliar blocker in plain language.
+       Omit empty lines. Explain a critical unfamiliar blocker in plain language.
 AG-10: Autocast is mandatory but internal by default. Surface cast/workflow/review only when
        the user asks or the route materially explains a consequential choice or blocker.
 AG-13: Coined protocols fire on the token alone — RRed, human gate, quorum, cleanerz.
@@ -39,7 +39,7 @@ OD-06: One artifact per turn. Never emit an answer plus a duplicate full-text bl
 
 ### HANDOFF / COMMITTEE (HC)
 HC-01: Actual transfer/interruption uses Handoff schema (core/continuity.md). Routine completion
-       is not a handoff, and the schema stays in durable state unless the user asks to see it.
+       is not a handoff, and the schema stays in durable memory unless the user asks to see it.
 HC-02: Review first token: ACK | MODIFY | REJECT. Deltas, not rewrites.
 
 ### PROGRESS (PI)
