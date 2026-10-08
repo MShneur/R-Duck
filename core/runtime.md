@@ -91,7 +91,7 @@ intake constraint unreferenced for a phase, or user → constraint-decay   re-re
 diff/scope touches what the brief never named       → orthogonal-edit    revert out-of-radius edits; log them as findings
 record asserts a decision with no turn where a      → authority-         downgrade to proposed; name who originated it
   human chose it                                      laundering
-required verifier cannot load/connect/auth/observe   → verifier-path-      repair verifier; verify again; unresolved=NOT_TESTED/BLOCKED
+required verifier cannot start/connect/auth/observe   → verifier-path-      repair verifier; verify again; unresolved=NOT_TESTED/BLOCKED
   the acceptance path                                  failure
 ```
 
@@ -105,7 +105,7 @@ this table passes unseen — absence of a flag is not evidence of a clean run.
 ## VERIFIER INTEGRITY
 
 When acceptance depends on a browser, validator, connector, build path, fixture,
-or runtime, that verifier must produce the required observation. Failure to load,
+or runtime, that verifier must produce the required observation. Failure to start,
 connect, authenticate, or observe is evidence about the verifier, not evidence that
 the target path passed.
 
