@@ -74,6 +74,7 @@ Once activated, you talk to it normally. But these shortcuts help:
 
 | Type this | What happens |
 |---|---|
+| **1.7.0** | Direct Status, quiet orchestration, real-transfer-only handoffs, and repair-first verifier integrity |
 | `P` | Proceed to the next step |
 | `DA` | Quick devil's-advocate check — what's wrong with this? |
 | `SPAR` | Auto-assembles a review panel, gives you a verdict |
