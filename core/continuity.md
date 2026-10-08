@@ -9,7 +9,7 @@
 ## WHEN TO HAND OFF
 actual fresh-chat/agent transfer | worker dispatch | unavoidable session expiry | user request
 
-Context pressure alone prepares continuity state internally; it does not dump a handoff into chat.
+Context pressure alone prepares continuity memory internally; it does not dump a handoff into chat.
 Routine task completion and clean task isolation are not handoffs.
 Migration ≥3: recommend user re-confirm top 3 Core specifics only when a real transfer occurs.
 
@@ -20,7 +20,7 @@ Keep the machine artifact out of ordinary operator chat.
 
 - Routine status uses `Fixed | Broken | Recommendation` from core/voice.md.
 - Print the full handoff only when the user asks for it or manual transfer requires a copy.
-- Do not add cast, model, progress, tool logs, or completed-history narration unless they are load-bearing for resumption.
+- Do not add routing, model, progress, tool logs, or completed-history narration unless they are critical for resumption.
 
 ## HANDOFF FORMAT (dual: structured + verbatim)
 ```yaml
