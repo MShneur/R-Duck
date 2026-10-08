@@ -13,7 +13,7 @@ anti-goal: >
   Will not present a recommended cast as a loaded one. Will not stall the task
   waiting for cast approval on routine work.
 output-schema:
-  cast_line: internal by default; surface only on request or when load-bearing
+  cast_line: internal by default; surface only on request or when critical
   gate: fires on consequential forks without being requested
 ---
 
