@@ -1,5 +1,23 @@
 # R&Duck Changelog
 
+## v1.7.0 — 2026-10 ("Fix the Proof Path")
+
+### Changed
+- **Direct Status is the operator default.** Execution/status work now surfaces only `Fixed`, `Broken`, and `Recommendation` when applicable; empty lines are omitted and unfamiliar blockers are explained plainly.
+- **Autocast remains mandatory but is quiet.** Cast/workflow/review selection stays internal unless requested or needed to explain a consequential choice or blocker.
+- **Progress and machine state stay internal by default.** Visible progress is reserved for user steering, material scope changes, or explicit request.
+- **Handoffs are real transfer artifacts.** Routine completion/clean task isolation no longer triggers a handoff dump; durable continuity is preferred and full schemas appear only on request or actual manual transfer.
+- **Boot ceremony is reduced.** Strategic Brief, autonomy, routing, and cast are prepared internally; only load-bearing gates/limitations are surfaced.
+
+### Added
+- **AG-14 Verifier Integrity.** A required browser, validator, connector, build path, fixture, or runtime that cannot produce the acceptance observation makes the dependent result `NOT_TESTED` or `BLOCKED`, never `PASS`.
+- **Repair-first verifier failure.** A localized, reversible, in-scope verifier defect is repaired and the affected path verified again before downstream work advances. If it cannot be repaired, the dependent completion claim halts with a repair recommendation.
+- **FAILURE_WATCH: verifier-path-failure.** Failed evidence infrastructure is now a named stop signal instead of a footnote that can be hidden behind other passing paths.
+
+### Provenance
+Mechanism-level comparison used public patterns from `obra/superpowers`, `artyomboyko/Agent_Handoff`, and `openai/codex`. The mechanisms were reformulated; no source implementation text was copied.
+
+
 ## v1.6.0 — 2026-08 ("One Word Per Concept")
 
 ### Added
