@@ -1,4 +1,4 @@
-# R&Duck Continuity Protocol v1.0.0
+# R&Duck Continuity Protocol v1.7.0
 # Merges: handoff + corrections (PSCM)
 # Everything about SESSION TRANSITIONS AND CORRECTION PERSISTENCE lives here.
 
@@ -7,8 +7,20 @@
 # ═══════════════════════════════════════════════
 
 ## WHEN TO HAND OFF
-context >75% | session near expiry | clean task isolation | worker dispatch | user request
-Migration ≥3: ⚠ recommend user re-confirm top 3 Core specifics.
+actual fresh-chat/agent transfer | worker dispatch | unavoidable session expiry | user request
+
+Context pressure alone prepares continuity state internally; it does not dump a handoff into chat.
+Routine task completion and clean task isolation are not handoffs.
+Migration ≥3: recommend user re-confirm top 3 Core specifics only when a real transfer occurs.
+
+## HANDOFF STORAGE / OPERATOR SURFACE
+
+Prefer the canonical durable continuity store (including Backstitch when available).
+Keep the machine artifact out of ordinary operator chat.
+
+- Routine status uses `Fixed | Broken | Recommendation` from core/voice.md.
+- Print the full handoff only when the user asks for it or manual transfer requires a copy.
+- Do not add cast, model, progress, tool logs, or completed-history narration unless they are load-bearing for resumption.
 
 ## HANDOFF FORMAT (dual: structured + verbatim)
 ```yaml
