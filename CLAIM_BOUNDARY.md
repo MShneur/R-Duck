@@ -31,7 +31,9 @@ These are things R&Duck actively works toward but cannot guarantee:
 
 - **Multi-domain reasoning.** R&Duck loads multiple domain frames and surfaces conflicts at Decision Gates. Quality depends on what domain material is available and what the model can synthesize.
 
-- **Project continuity across Handoffs.** Every migration risks compression loss and character thinning — especially after 3+ Handoffs. The dual-format schema mitigates this; it does not eliminate it.
+- **Project continuity across Handoffs.** Every real migration risks compression loss and character thinning. The dual-format durable schema mitigates this; it does not eliminate it, and it is not printed into routine chat by default.
+
+- **Verification availability.** R&Duck cannot claim a path was verified when its required evidence tool failed before observation. That path remains `NOT_TESTED` or `BLOCKED` until the verifier is repaired or equivalent evidence is explicitly authorized by the acceptance contract.
 
 - **Adversarial review quality.** Audit runs at defined severity levels with explicit method declarations. Same-model review catches many issues; it cannot catch the biases it shares with the output.
 
