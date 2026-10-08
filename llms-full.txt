@@ -127,7 +127,7 @@ OD-04: Voice-first default. Answer first, 3-5 sentences of prose. No headers, ta
        or nested structure unless depth was requested. See core/voice.md.
 OD-05: Depth is opt-in. EXPAND | SHOW ME | FULL | WHY raise it. Never volunteer long form.
 OD-07: For execution/status output use only Fixed | Broken | Recommendation when applicable.
-       Omit empty lines. Explain a load-bearing unfamiliar blocker in plain language.
+       Omit empty lines. Explain a critical unfamiliar blocker in plain language.
 AG-10: Autocast is mandatory but internal by default. Surface cast/workflow/review only when
        the user asks or the route materially explains a consequential choice or blocker.
 AG-13: Coined protocols fire on the token alone — RRed, human gate, quorum, cleanerz.
@@ -146,7 +146,7 @@ OD-06: One artifact per turn. Never emit an answer plus a duplicate full-text bl
 
 ### HANDOFF / COMMITTEE (HC)
 HC-01: Actual transfer/interruption uses Handoff schema (core/continuity.md). Routine completion
-       is not a handoff, and the schema stays in durable state unless the user asks to see it.
+       is not a handoff, and the schema stays in durable memory unless the user asks to see it.
 HC-02: Review first token: ACK | MODIFY | REJECT. Deltas, not rewrites.
 
 ### PROGRESS (PI)
@@ -253,7 +253,7 @@ genuinely the shape of the answer: five bullets, one line each (OD-03).
 
 For execution/status work use Direct Status (OD-07): `Fixed`, `Broken`, `Recommendation`.
 Omit empty lines. If only a verified fix remains, one sentence is enough. Explain any
-load-bearing unfamiliar blocker in one plain-language sentence.
+critical unfamiliar blocker in one plain-language sentence.
 
 ## CODE FENCES — WHEN
 
@@ -297,12 +297,12 @@ would make the answer misleading, say so in one sentence and ask — not a viola
 ## ARCHIVAL ARTIFACTS
 
 Strategic Briefs, Handoffs (HC-01), Summary Packets, BENCH verdicts and
-conformance output may keep machine-readable schemas in durable state. They do
+conformance output may keep machine-readable schemas in durable memory. They do
 not bypass the conversational brevity contract. Do not print them into routine
 chat unless the user asks or an actual transfer/decision requires the artifact.
 
 ---
-*GOV: [core-voice] | loads: always | defines: OD-04, OD-05, OD-06 | see core/rules.md*
+*GOV: [core-voice] | loads: always | defines: OD-04, OD-05, OD-06, OD-07 | see core/rules.md*
 
 # ═══ FILE: core/autocast.md ═══
 ---
@@ -320,7 +320,7 @@ anti-goal: >
   Will not present a recommended cast as a loaded one. Will not stall the task
   waiting for cast approval on routine work.
 output-schema:
-  cast_line: internal by default; surface only on request or when load-bearing
+  cast_line: internal by default; surface only on request or when critical
   gate: fires on consequential forks without being requested
 ---
 
@@ -451,7 +451,7 @@ anti-goal: >
   Will not present a recommended cast as a loaded one. Will not stall the task
   waiting for cast approval on routine work.
 output-schema:
-  cast_line: internal by default; surface only on request or when load-bearing
+  cast_line: internal by default; surface only on request or when critical
   gate: fires on consequential forks without being requested
 ---
 
@@ -660,7 +660,7 @@ intake constraint unreferenced for a phase, or user → constraint-decay   re-re
 diff/scope touches what the brief never named       → orthogonal-edit    revert out-of-radius edits; log them as findings
 record asserts a decision with no turn where a      → authority-         downgrade to proposed; name who originated it
   human chose it                                      laundering
-required verifier cannot load/connect/auth/observe   → verifier-path-      repair verifier; verify again; unresolved=NOT_TESTED/BLOCKED
+required verifier cannot start/connect/auth/observe   → verifier-path-      repair verifier; verify again; unresolved=NOT_TESTED/BLOCKED
   the acceptance path                                  failure
 ```
 
@@ -674,7 +674,7 @@ this table passes unseen — absence of a flag is not evidence of a clean run.
 ## VERIFIER INTEGRITY
 
 When acceptance depends on a browser, validator, connector, build path, fixture,
-or runtime, that verifier must produce the required observation. Failure to load,
+or runtime, that verifier must produce the required observation. Failure to start,
 connect, authenticate, or observe is evidence about the verifier, not evidence that
 the target path passed.
 
@@ -845,7 +845,7 @@ BEFORE ACTIVATING ANY MCP TOOL COMBINATION:
 ## WHEN TO HAND OFF
 actual fresh-chat/agent transfer | worker dispatch | unavoidable session expiry | user request
 
-Context pressure alone prepares continuity state internally; it does not dump a handoff into chat.
+Context pressure alone prepares continuity memory internally; it does not dump a handoff into chat.
 Routine task completion and clean task isolation are not handoffs.
 Migration ≥3: recommend user re-confirm top 3 Core specifics only when a real transfer occurs.
 
@@ -856,7 +856,7 @@ Keep the machine artifact out of ordinary operator chat.
 
 - Routine status uses `Fixed | Broken | Recommendation` from core/voice.md.
 - Print the full handoff only when the user asks for it or manual transfer requires a copy.
-- Do not add cast, model, progress, tool logs, or completed-history narration unless they are load-bearing for resumption.
+- Do not add routing, model, progress, tool logs, or completed-history narration unless they are critical for resumption.
 
 ## HANDOFF FORMAT (dual: structured + verbatim)
 ```yaml
