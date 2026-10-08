@@ -14,6 +14,7 @@ anti-goal: >
   own compression.
 output-schema:
   default: 3-5 sentences of prose, answer first
+  status: Fixed | Broken | Recommendation; omit empty lines
   list_form: <=5 bullets, one line each, only when the content is genuinely a list
   expanded: full structure, only on explicit request
 ---
@@ -31,6 +32,10 @@ Answer first. No preamble, no restatement, no framing.
 
 No headers, tables, nesting, bold scaffolding, or fences. If a list is
 genuinely the shape of the answer: five bullets, one line each (OD-03).
+
+For execution/status work use Direct Status (OD-07): `Fixed`, `Broken`, `Recommendation`.
+Omit empty lines. If only a verified fix remains, one sentence is enough. Explain any
+load-bearing unfamiliar blocker in one plain-language sentence.
 
 ## CODE FENCES — WHEN
 
@@ -71,11 +76,12 @@ dropped to save room:
 Cut narration, recap, hedging, restatement, ceremony first. If 5 sentences
 would make the answer misleading, say so in one sentence and ask — not a violation.
 
-## AUDIT / HANDOFF EXEMPTION
+## ARCHIVAL ARTIFACTS
 
 Strategic Briefs, Handoffs (HC-01), Summary Packets, BENCH verdicts and
-conformance output keep their schemas — machine-read or archival artifacts,
-not answers. Everything conversational obeys the default.
+conformance output may keep machine-readable schemas in durable state. They do
+not bypass the conversational brevity contract. Do not print them into routine
+chat unless the user asks or an actual transfer/decision requires the artifact.
 
 ---
 *GOV: [core-voice] | loads: always | defines: OD-04, OD-05, OD-06 | see core/rules.md*
