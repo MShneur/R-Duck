@@ -453,7 +453,6 @@ something cheap and reversible.
 ---
 *GOV: [core-autocast] | loads: always | see core/routing.md, core/review.md, specs/external-personas.md*
 
-
 # ═══ FILE: core/runtime.md ═══
 # R&Duck Runtime Protocol v1.0.0
 # Merges: persistence + confidence + freshness
