@@ -28,6 +28,14 @@ Keep the cast/workflow/review tier internal by default. Surface it only when the
 user asks or when the route materially explains a consequential choice, blocker,
 or disagreement. No permission is needed for routine internal routing.
 
+## AUTOMATIC EVIDENCE ASSEMBLY / QUORUM CONTINUATION
+
+For named `quorum`, route the existing five-or-more weighted AoA seats and their two distinct documented-method practitioners per seat. Research task-fit across attributable contributions rather than filling missing expertise with famous names; optional third BRIDGE covers genuine cross-domain work. Quorum returns competing methods, disagreement, and a falsifiable next test. When the task requires execution, route onward through the **published** `aoa:workflows/evidence-assembly.md`, not an endless research-only conversation. Preserve the current owner, allowed operations and independent verifier. If that method is not published/fetched, use a documented local equivalent and mark AoA `NOT_LOADED`; do not claim a separate professional or external model ran.
+
+For significant build, regression, or complex diagnosis with unresolved causal alternatives, offer Evidence Assembly internally even without the literal token. Simple facts, quick edits and writing requests bypass it. An explicit request to perform a task takes precedence over optional prompt rewriting.
+
+Easy Handoff / Direct Status applies on every activated substantial work route from the first response. Do not ask for a separate Easy Handoff invocation. Keep durable state detailed but operator-facing result short. A routine finish is not a transfer.
+
 ## RECOMMEND ≠ LOAD [BINDING]
 
 Naming from the map below is **no fetch, no injection surface, no gate**.

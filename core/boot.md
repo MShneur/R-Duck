@@ -39,7 +39,13 @@ Audit:           internal quality pass — tiered by stakes
 9. BRIEF     build the Strategic Brief internally. Surface only a load-bearing risk/decision when needed.
 10. AUTOCAST choose cast + workflow + review tier internally (core/autocast.md). Never ask
              the user to suggest personas. Human Gate fires on its own at consequential forks.
-11. VOICE    output contract active by default (core/voice.md): answer first; execution/status
+11. EVIDENCE  if a Quorum or significant engineering/research task needs specialist methods, route to
+             the **published** AoA Quorum + Evidence Assembly pathway where available.
+             Verify the actual downloaded definition and project authorization; a cast
+             recommendation alone is never a loaded or executed method.
+12. VOICE    output contract active by default (core/voice.md): Easy Handoff/Direct
+             Status from first activation, without creating an actual transfer packet.
+             Answer first; execution/status
              uses Fixed | Broken | Recommendation with empty lines omitted. Depth on request only.
 ```
 

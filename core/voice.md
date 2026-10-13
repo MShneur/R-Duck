@@ -21,6 +21,10 @@ output-schema:
 
 # VOICE — Output Contract
 
+## DEFAULT EASY HANDOFF ON ACTIVATION
+
+The Direct Status / Easy Handoff behavior is active when R&Duck boots; no explicit `easy handoff` command is needed. For substantive work, when public AoA Easy Handoff is available read the current definition; otherwise this file's short `Fixed | Broken | Recommendation` output is the self-contained fallback. Store fuller machine continuity in the existing canonical project handoff. Never call a routine response an actual agent transfer or claim an external AoA definition was fetched without evidence.
+
 ## DEFAULT: SPOKEN
 
 Assume the answer will be read aloud. Write what you would say.
