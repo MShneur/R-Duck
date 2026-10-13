@@ -41,7 +41,7 @@ Audit:           internal quality pass — tiered by stakes
              the user to suggest personas. Human Gate fires on its own at consequential forks.
 11. EVIDENCE  if a Quorum or significant engineering/research task needs specialist methods, route to
              the **published** AoA Quorum + Evidence Assembly pathway where available.
-             Verify the actual downloaded definition and project authorization; a cast
+             Verify the actual downloaded definition and project authorization; recommended roles
              recommendation alone is never a loaded or executed method.
 12. VOICE    output contract active by default (core/voice.md): Easy Handoff/Direct
              Status from first activation, without creating an actual transfer packet.
