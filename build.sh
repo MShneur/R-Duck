@@ -11,7 +11,7 @@ VERSION=$(cat VERSION 2>/dev/null || echo MISSING)
 echo "Generating llms-full.txt..."
 printf '# R&Duck v%s — Full Protocol (Single-File Load)\n# Auto-generated on deploy. Individual files at the site root.\n' "$VERSION" > llms-full.txt
 
-for f in core/boot.md core/rules.md core/voice.md core/autocast.md core/autocast.md core/runtime.md core/routing.md core/continuity.md core/review.md; do
+for f in core/boot.md core/rules.md core/voice.md core/autocast.md core/runtime.md core/routing.md core/continuity.md core/review.md; do
   [ -f "$f" ] && { echo -e "\n# ═══ FILE: $f ═══"; cat "$f"; } >> llms-full.txt
 done
 for dir in capabilities specs; do
@@ -135,7 +135,7 @@ ROOTSTART
 
 # Add core files with descriptions
 echo '<h3>Core (always-loaded foundation)</h3>' >> index.html
-for f in core/boot.md core/rules.md core/voice.md core/runtime.md core/routing.md core/continuity.md core/review.md; do
+for f in core/boot.md core/rules.md core/voice.md core/autocast.md core/runtime.md core/routing.md core/continuity.md core/review.md; do
   if [ -f "$f" ]; then
     desc=$(head -3 "$f" | grep "^#" | head -1 | sed 's/^#* *//' | cut -c1-80)
     echo "<a class=\"file\" href=\"$f\">📝 $f<span class=\"desc\"> — $desc</span></a>" >> index.html
@@ -161,7 +161,7 @@ for f in domains/*.md; do
 done
 
 # Libraries, workers, specs, research
-for section in "libraries:Libraries" "workers:Workers" "specs:Specs" "research:Research"; do
+for section in "libraries:Libraries" "workers:Workers" "specs:Specs" "research:Research" "tests:Validation"; do
   dir="${section%%:*}"
   title="${section##*:}"
   echo "<h3>$title</h3>" >> index.html
@@ -245,7 +245,7 @@ DIRHEAD
 }
 
 echo "Generating subdirectory pages..."
-for dir in core capabilities domains libraries workers specs research; do
+for dir in core capabilities domains libraries workers specs research tests; do
   [ -d "$dir" ] && generate_dir_index "$dir" "$dir/"
 done
 

@@ -149,7 +149,7 @@ if python3 tools/vocab_check.py; then pass "C12 vocabulary ratchet held or tight
 else fail "C12 a forbidden synonym was introduced — see specs/vocabulary.md"; fi
 
 # ── C10: instruction ceiling (AD-04 — WARN only) ───────────────────────────
-echo "— C10 instruction ceiling —"
+# ── C13: historical v0.5 package / behavioral contract ───────────────────\necho "— C13 package acceptance contract —"\nif python3 tests/acceptance_contract.py; then\n  pass "C13 v0.5 package capabilities are wired into current owners"\nelse\n  fail "C13 package acceptance contract failed"\nfi\n\necho "— C10 instruction ceiling —"
 if python3 tools/instruction_count.py; then
   warn "C10 band above. AD-04 bounds instructions, not lines — a line count overstates by 60-95%."
 else

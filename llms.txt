@@ -1,4 +1,4 @@
-# R&Duck v1.7.0 — Progressive Loading Index
+# R&Duck v1.8.0 — Progressive Loading Index
 # Scan this first (~50 tokens/section). Fetch only what the task needs. AD-04: ≤150-200 instructions.
 
 ## Core (always loaded)
@@ -24,10 +24,14 @@
 /libraries/personas.md | audiences.md | registers.md
 
 ## Workers & Specs
-/workers/worker-templates.md    — 7 types + Summary Packet schema
+/workers/worker-templates.md    — 8 types + Summary Packet schema
 /specs/governance-gate.md       — G25 gate + component registry + DUCK_BUILD
 /specs/external-personas.md     — optional Agents of AI roster: addressing, map, fetch discipline
 /specs/vocabulary.md            — controlled terms: one approved word per concept, ratchet-enforced
+
+## Verification
+/tests/README.md               — v0.5 package map + live A/B validation protocol
+/tests/acceptance_contract.py  — deterministic protocol wiring checks (run via conform.sh C13)
 
 ## Research
 /research/evolution-ledger.md | decisions.md | feedback.md
@@ -35,7 +39,7 @@
 ## Top-level
 /AGENTS.md | CLAIM_BOUNDARY.md | README.md | WIKI.md | CHANGELOG.md
 
-version: 1.7.0 | updated: 2026-08 | license: MIT | repo: github.com/MShneur/R-Duck
+version: 1.8.0 | updated: 2026-10 | license: MIT | repo: github.com/MShneur/R-Duck
 
 ## One-Shot Full Load
 /llms-full.txt  — ALL core + capability protocols concatenated (~67KB, ~1700 lines)

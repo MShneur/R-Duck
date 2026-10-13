@@ -428,3 +428,28 @@ entry_42:
   source: Willison — MCP prompt injection security problems (April 2025), GitHub MCP exploit
   rationale: A single MCP tool can combine all three trifecta elements. R&Duck recommends MCP
           at T2/T3 but wasn't warning about the combination risk.
+
+entry_43:
+  date: 2026-10
+  type: architectural_correction
+  decision: accept
+  change: Direct Status, real-transfer-only Handoffs, verifier integrity, and repair-first
+          verification promoted into the current R&Duck operating path.
+  source: User correction plus 2026-10 release reconciliation with Agents of AI / CTRL-AI
+  rationale: Routine handoff dumps obscured outcomes, while broken evidence paths could be
+             mistaken for tested behavior. Operator output must stay short without weakening proof.
+  failure_prevented: False PASS after verifier failure; handoff bloat; narration replacing execution
+
+entry_44:
+  date: 2026-10
+  type: validation_reconciliation
+  decision: adapt
+  change: Historical v0.5 package mapped into current v1.x owners instead of restoring ten
+          duplicate root modules. Added deterministic acceptance-contract checks and preserved
+          the three real-project A/B validation scenarios as the live superiority gate.
+  source: User-supplied R&Duck v0.5 package/validation handoff reconciled against current main
+  rationale: Most v0.5 capabilities already survived under renamed/consolidated owners, but the
+             behavior acceptance layer had no executable equivalent and several registry/pointer
+             surfaces had drifted. Reconcile capabilities, not filenames.
+  failure_prevented: Duplicate architecture; false missing-feature reports; untested package claims
+  deferred: MemPalace, Experience Drawers, CTRL_WAKE, CTRL_SLEEP remain optional until measured value

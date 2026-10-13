@@ -51,8 +51,8 @@ External research never auto-merges. Must: name the gap, pass G25, logged in dec
 # ═══════════════════════════════════════════════
 
 ```
-CORE (6 files):
-  boot | rules | runtime | routing | continuity | review
+CORE (8 files):
+  boot | rules | voice | autocast | runtime | routing | continuity | review
 
 CAPABILITIES (6 files):
   write | research | audit | strategize | code | rred
@@ -62,8 +62,8 @@ DOMAINS (8 files — presets over routing.md compose engine):
   legal-strategy | technical-analysis | business-strategy | creative-production
 
 LIBRARIES (3): personas | audiences | registers
-WORKERS (1):   worker-templates (7 types)
-SPECS (1):     governance-gate (this file)
+WORKERS (1):   worker-templates (8 types)
+SPECS (3):     governance-gate | external-personas | vocabulary
 RESEARCH (3):  evolution-ledger | decisions | feedback
 ```
 
