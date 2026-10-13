@@ -1,6 +1,6 @@
 # 🦆 R&Duck
 
-**Version: 1.7.0** | Last updated: 2026-06 | [Changelog](CHANGELOG.md)
+**Version: 1.8.0** | Last updated: 2026-10 | [Changelog](CHANGELOG.md)
 
 > *Why did the AI go to therapy? Because it kept finishing everyone's sentences — and none of them were its own thoughts. R&Duck fixes that.*
 
@@ -74,7 +74,6 @@ Once activated, you talk to it normally. But these shortcuts help:
 
 | Type this | What happens |
 |---|---|
-| **1.7.0** | Direct Status, quiet orchestration, real-transfer-only handoffs, and repair-first verifier integrity |
 | `P` | Proceed to the next step |
 | `DA` | Quick devil's-advocate check — what's wrong with this? |
 | `SPAR` | Auto-assembles a review panel, gives you a verdict |
@@ -93,7 +92,7 @@ domains/        8 areas of expertise, loaded one at a time
 libraries/      Specialist personas, audience profiles, writing registers
 workers/        Sub-agents it can dispatch for specific tasks
 specs/          Governance and component management
-research/       Decision history — 42 entries showing why everything is the way it is
+research/       Decision history — 44 entries showing why everything is the way it is
 ```
 
 The `research/evolution-ledger.md` is worth reading if you want to understand why specific decisions were made — or why some ideas were tried and rejected.
@@ -104,12 +103,16 @@ The `research/evolution-ledger.md` is worth reading if you want to understand wh
 
 | Version | What changed |
 |---|---|
+| **1.8.0** | Reconciles the v0.5 package into current owners; adds executable behavior-contract validation and the three real-project A/B scenarios; repairs registry/feedback/build drift |
+| **1.7.0** | Direct Status, quiet orchestration, real-transfer-only handoffs, and repair-first verifier integrity |
 | **1.0.3** | Integrity release: CI conformance gate (`conform.sh`), MIT LICENSE file, single-sourced VERSION, dead-link/slug fixes, llms-full regeneration |
 | **1.0.2** | Security additions: prompt injection trifecta check, safe-ingest worker, PROVEN code gate, drift detection |
 | **1.0.1** | Site auto-deploy: every push rebuilds `rd.mstep.org` automatically |
 | **1.0.0** | First full release: 36 files, DA/SPAR/BENCH review, DUCK_BUILD institutional memory |
 
 Full history: [CHANGELOG.md](CHANGELOG.md)
+
+Behavior/package validation: [tests/README.md](tests/README.md) — includes the v0.5 compatibility map and live A/B protocol.
 
 ---
 
