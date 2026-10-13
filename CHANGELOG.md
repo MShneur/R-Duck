@@ -1,5 +1,24 @@
 # R&Duck Changelog
 
+## v1.8.0 — 2026-10 ("Reconcile the Package")
+
+### Added
+- `tests/acceptance_contract.py` — stdlib-only deterministic checks for the historical v0.5 behavior contracts: activation failure, specifics persistence, audit bias, handoff restart, runtime honesty, anti-bloat, second-lens routing, self-correction memory, registry consistency, and duplicate-root prevention.
+- `tests/README.md` — exact v0.5-to-v1.x capability map plus the three frozen real-project A/B scenarios (legal-ish complaint, research, writing). Static conformance is explicitly not treated as proof of superiority.
+- `conform.sh` C13 — release gate for the package acceptance contract.
+
+### Fixed
+- `research/feedback.md` pointed at deleted `core/corrections.md`; PSCM now points to its actual owner, `core/continuity.md`.
+- `specs/governance-gate.md` component registry now matches live architecture: 8 core files, 3 specs, and 8 worker types.
+- `build.sh` no longer concatenates `core/autocast.md` twice into `llms-full.txt`; the site directory also exposes the validation folder and lists autocast with the core set.
+- README package/version history and ledger count reconciled to current release state.
+
+### Architecture decision
+The old v0.5 file names were **not** restored. Their capabilities remain consolidated under current owners. MemPalace, Experience Drawers, CTRL_WAKE, and CTRL_SLEEP stay deferred/optional until real measurements justify them.
+
+### Claim boundary
+This release proves package wiring and structural conformance only. Do not claim R&Duck beats default AI until the live A/B protocol has repeatable evidence.
+
 ## v1.7.0 — 2026-10 ("Fix the Proof Path")
 
 ### Changed
