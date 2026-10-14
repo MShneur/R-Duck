@@ -1,0 +1,24 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:rd.mstep.org:skill:rduck-bootstrap",
+      "displayName": "R&Duck Bootstrap",
+      "type": "application/agent-skills+md",
+      "url": "https://rd.mstep.org/activation/rduck/SKILL.md",
+      "capabilities": [
+        "ProjectOrchestration",
+        "AgentHarnessRouting",
+        "IntentReconciliation",
+        "CapabilityDiscovery"
+      ],
+      "description": "Progressive R&Duck project-operator bootstrap with Showrunner harness and task-selected Agents of AI methods.",
+      "representativeQueries": [
+        "activate R&Duck and run this project",
+        "use the Superuser harness for this task",
+        "continue this project and find any missing AI capability"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-14"
+    }
+  ]
+}
