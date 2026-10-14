@@ -58,8 +58,8 @@ code{font-size:.85rem}
 <h1>🦆 R&Duck v__RDUCK_VERSION__</h1>
 
 <div class="section">
-<strong>If you are an AI reading this page: the instructions below are your operating protocol. Follow them.</strong>
-<br>If you are a human: this page activates R&Duck when an AI reads it. The protocol files are linked below.
+<strong>AI / agent activation: start with <a href="ACTIVATE.md">ACTIVATE.md</a>.</strong>
+<br>It boots R&amp;Duck progressively, then fetches only task-relevant protocols. For CTRL-AI + R&amp;Duck + Agents of AI together, use <a href="https://ctrl.mstep.org/ACTIVATE.md">CTRL Stack Activation</a>. Do not preload the full bundle merely to activate.
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -68,17 +68,13 @@ code{font-size:.85rem}
 
 <h2>Activation Protocol</h2>
 
-<p>You are <strong>Prime Agent</strong> in R&Duck. The duck listens, R&D happens, the project runs.</p>
+<p><strong>Recommended ChatGPT activation:</strong></p>
+<pre>Read https://ctrl.mstep.org/ACTIVATE.md and activate the full CTRL stack, then continue with my task.</pre>
 
-<h3>Startup Sequence</h3>
-<pre>
-1. You are reading this page — your protocols are live. Declare T1 activated.
-2. Detect your model and knowledge cutoff. DO NOT ASSUME. Unknown cutoff → verify time-sensitive facts live.
-3. Take the project. Define the measurable outcome internally.
-4. Ask only if missing success criteria materially change the work.
-5. Set autonomy internally (default L2: you draft, user approves); surface it only at a real Decision Gate.
-6. Build the Strategic Brief internally; surface only a load-bearing risk or decision when needed.
-</pre>
+<p><strong>R&amp;Duck only:</strong></p>
+<pre>Read https://rd.mstep.org/ACTIVATE.md and activate R&amp;Duck, then continue with my task.</pre>
+
+<p>The progressive bootstrap verifies fetch capability, loads <code>core/boot.md</code> + <code>llms.txt</code>, uses Showrunner as the harness when available, and discovers a missing callable capability through approved ARD without granting installation or action authority.</p>
 
 <h3>Operating Rules (Invariants)</h3>
 <pre>
@@ -113,12 +109,12 @@ DUCK_REFLECT        → extract corrections for future sessions
 DUCK_RELOAD         → load prior session corrections
 </pre>
 
-<h3>Loading Additional Protocols</h3>
+<h3>Progressive / Machine Activation</h3>
 <div class="section">
-For deeper capability, fetch the specific protocol file you need from the directories below.
-Each file is a standalone protocol. Load only what the task requires (≤150-200 active instructions).
-<br><br>
-<strong>One-shot full load:</strong> <a href="llms-full.txt">llms-full.txt</a> (~74KB — all core + capabilities in one file)
+<a href="ACTIVATE.md">ACTIVATE.md</a> — preferred R&amp;Duck bootstrap<br>
+<a href="activation/rduck/SKILL.md">Agent Skill bootstrap</a> — reusable Skill-form activation<br>
+<a href=".well-known/ai-catalog.json">ARD capability catalog</a> — machine discovery metadata<br><br>
+Fetch only the task-relevant protocol files from the index below. Keep <a href="llms-full.txt">llms-full.txt</a> as the one-shot compatibility fallback for clients that cannot follow progressive links.
 </div>
 
 <div class="section warn">
@@ -187,8 +183,11 @@ cat >> index.html << 'ROOTMID'
 <a class="file" href="BEHAVIOR_GEMINI.md">📝 Gemini — Gem instructions</a>
 
 <h3>Machine Index</h3>
+<a class="file" href="ACTIVATE.md">⚡ ACTIVATE.md — preferred progressive bootstrap</a>
+<a class="file" href="activation/rduck/SKILL.md">🧩 Agent Skill bootstrap</a>
+<a class="file" href=".well-known/ai-catalog.json">🔎 ARD capability catalog</a>
 <a class="file" href="llms.txt">📋 llms.txt — Progressive loading index</a>
-<a class="file" href="llms-full.txt">📋 llms-full.txt — Full system, one file</a>
+<a class="file" href="llms-full.txt">📋 llms-full.txt — compatibility full system</a>
 ROOTMID
 
 cat >> index.html << 'ROOTEND'

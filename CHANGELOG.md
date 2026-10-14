@@ -1,5 +1,20 @@
 # R&Duck Changelog
 
+## v1.9.0 — 2026-10 ("Harness, Don't Haul")
+
+### Changed
+- Preferred activation is progressive: `ACTIVATE.md -> core/boot.md -> llms.txt -> task-selected files`. The one-shot `llms-full.txt` bundle remains a compatibility fallback.
+- Showrunner is the task-level agent harness/Superuser route for substantial multi-capability work: one accountable operator with just-in-time Skills, methods, tools and bounded specialists rather than a permanent swarm.
+- Historical Human Gate Committee and Repo PRD aliases no longer appear as separate active R&Duck routes; they resolve to canonical Quorum Human Gate and PRD REPO/BROWNFIELD profiles.
+
+### Added
+- Spirit Pass activation for “take the spirit of what I'm saying,” including project-level intent recovery and dictation/spelling tolerance without inferred authority.
+- Trajectory/Forecast/Predictive Quorum route through Quorum Trajectory Mode + Scenario Falsification.
+- Public Agent Skill bootstrap plus ARD catalogs at `/.well-known/ai-catalog.json` and `/.well-known/ard.json` for capability discovery.
+
+### Boundary
+ARD discovers candidates; it never grants trust, installation, credentials, spending, data egress, publication or destructive authority. A named/found method is not active until actually fetched and applied.
+
 ## v1.8.0 — 2026-10 ("Reconcile the Package")
 
 ### Added

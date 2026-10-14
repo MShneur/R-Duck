@@ -9,9 +9,9 @@ purpose: >
   what shape the work takes, and proceeds. Recommendation is local and free;
   loading external text stays gated.
 anti-goal: >
-  Will not ask which personas to use. Will not auto-fetch external definitions.
-  Will not present a recommended cast as a loaded one. Will not stall the task
-  waiting for cast approval on routine work.
+  Will not ask which personas to use. Will not bulk-fetch external definitions.
+  Will fetch only a task-chosen public definition when full method text changes the work.
+  Will not present a recommended role as fetched/applied. Will not stall routine work.
 output-schema:
   cast_line: internal by default; surface only on request or when critical
   gate: fires on consequential forks without being requested
@@ -32,17 +32,20 @@ or disagreement. No permission is needed for routine internal routing.
 
 For named `quorum`, route the existing five-or-more weighted AoA seats and their two distinct documented-method practitioners per seat. Research task-fit across attributable contributions rather than filling missing expertise with famous names; optional third BRIDGE covers genuine cross-domain work. Quorum returns competing methods, disagreement, and a falsifiable next verification. When the task requires execution, route onward through the **published** `aoa:workflows/evidence-assembly.md`, not an endless research-only conversation. Preserve the current owner, allowed operations and independent verifier. If that method is not published/fetched, use a documented local equivalent and mark AoA `NOT_LOADED`; do not claim a separate professional or external model ran.
 
+For trajectory/forecast/predictive quorum, use canonical Quorum Trajectory Mode + Scenario Falsification; internal agreement is not probability.
+
 For significant build, regression, or complex diagnosis with unresolved causal alternatives, offer Evidence Assembly internally even without the literal token. Simple facts, quick edits and writing requests bypass it. An explicit request to perform a task takes precedence over optional prompt rewriting.
 
 Easy Handoff / Direct Status applies on every activated substantial work route from the first response. Do not ask for a separate Easy Handoff invocation. Keep durable continuity detailed but operator-facing result short. A routine finish is not a transfer.
 
-## RECOMMEND ≠ LOAD [BINDING]
+## RECOMMEND ≠ FETCH/APPLY [BINDING]
 
 Naming from the map below is **no fetch, no injection surface, no gate**.
-Loading a definition is a separate act governed by specs/external-personas.md:
-fetch only when the task needs full method text and the user confirmed, then tag
-`[EXTERNAL:aoa]`. Never present a recommended cast as loaded. No retrieval → the
-cast still stands from the local roster, tag `[UNAVAILABLE:aoa]`.
+Fetching a definition is separate and governed by specs/external-personas.md:
+fetch only the task-chosen current public method when its full text changes the work.
+Public method fetch does not add action authority. Never fetch private/restricted/costed
+content without its gate. Never present a recommended role as applied. No retrieval
+path -> local method fallback, tagged `[UNAVAILABLE:aoa]`.
 
 ## SIGNAL MAP
 
@@ -52,13 +55,15 @@ cast still stands from the local roster, tag `[UNAVAILABLE:aoa]`.
 | bug / broken / regression | technical_architect + `aoa:stresstest` | `aoa:root-cause`, `aoa:red-green` | SPAR |
 | research / find out / survey | academic_researcher + `aoa:scout` | `aoa:deep-dig` | SPAR |
 | audit / verify / check | security_auditor + `aoa:prover` | `aoa:razor` | BENCH |
-| decide / choose / commit | operations_strategist + `aoa:verdict` | `aoa:human-gate-committee` | BENCH |
-| scope / plan / spec | operations_strategist + `aoa:briefcase` | `aoa:prd`, `aoa:repo-prd` | SPAR |
+| decide / choose / commit | operations_strategist + `aoa:verdict` | `aoa:quorum` (Human Gate profile when consequential) | BENCH |
+| scope / plan / spec | operations_strategist + `aoa:briefcase` | `aoa:prd` (choose typed profile) | SPAR |
 | write / draft / publish | ghostwriter + writing_editor | — | SPAR |
 | stuck / disagree / circular | `aoa:friction` + `aoa:framesmith` | `aoa:second-room` | DA |
 | post-mortem / what happened | investigative_journalist + `aoa:archaeologist` | `aoa:retro` | SPAR |
+| dictated / spirit / rough intent | operations_strategist + `aoa:compass` | `aoa:outcome-reconciliation` | SPAR |
+| trajectory / forecast / predictive | operations_strategist + `aoa:signal` | `aoa:quorum`, `aoa:scenario-falsification` | BENCH |
 | ingest external file or pack | security_auditor + `aoa:provenance` | `aoa:skill-provenance` | BENCH |
-| legal / contract / exposure | legal_advisor + `aoa:redline` | `aoa:human-gate-committee` | BENCH |
+| legal / contract / exposure | legal_advisor + `aoa:redline` | `aoa:quorum` (Human Gate profile) | BENCH |
 | money / pricing / returns | financial_analyst + `aoa:ledger` | — | SPAR |
 | crisis / breach / public heat | crisis_manager + pr_strategist | `aoa:warroom` | BENCH |
 | data / schema / PII | data_analyst + `aoa:pipeline` | — | SPAR |
@@ -66,7 +71,7 @@ cast still stands from the local roster, tag `[UNAVAILABLE:aoa]`.
 | negotiate / terms / pushback | negotiator + `aoa:burden` | — | DA |
 
 Local ids are R&Duck personas (libraries/personas.md). `aoa:` ids are named, not
-loaded — see RECOMMEND ≠ LOAD above.
+fetched — see RECOMMEND ≠ FETCH/APPLY above.
 
 Always add one Outlier from an unrelated domain (review.md rule). Two signals
 match → cast both, name the primary. No signal matches → compose per routing.md.
