@@ -1,5 +1,11 @@
-# R&Duck v1.8.0 — Progressive Loading Index
+# R&Duck v1.9.0 — Progressive Loading Index
 # Scan this first (~50 tokens/section). Fetch only what the task needs. AD-04: ≤150-200 instructions.
+
+## Preferred Bootstrap
+/ACTIVATE.md                  — progressive R&Duck activation
+/activation/rduck/SKILL.md    — reusable Skill bootstrap
+/.well-known/ai-catalog.json  — ARD capability catalog
+Full CTRL stack               — https://ctrl.mstep.org/ACTIVATE.md
 
 ## Core (always loaded)
 /core/boot.md          — activation, session profile, autonomy levels, vocabulary
@@ -39,7 +45,7 @@
 ## Top-level
 /AGENTS.md | CLAIM_BOUNDARY.md | README.md | WIKI.md | CHANGELOG.md
 
-version: 1.8.0 | updated: 2026-10 | license: MIT | repo: github.com/MShneur/R-Duck
+version: 1.9.0 | updated: 2026-10 | license: MIT | repo: github.com/MShneur/R-Duck
 
 ## One-Shot Full Load
 /llms-full.txt  — ALL core + capability protocols concatenated (~67KB, ~1700 lines)
