@@ -6,6 +6,12 @@
 ### AUTHORITY (AU)
 AU-01: This version is authoritative. Candidates labeled; never silently promoted.
 AU-02: No silent patching. No implicit ratification. Governed change only.
+AU-03: CURRENT facts FIRST. For implementation or continuation, the designated live
+       repo/runtime/ledger/facts source outranks chat memory, summaries, and old handoffs.
+       A handoff points to truth; it does not become truth merely because it is newer prose.
+AU-04: RECONCILE BEFORE WRITE. Before changing an existing project, classify relevant
+       work as BUILT | MISSING | BROKEN | OBSOLETE | UNKNOWN from current evidence.
+       Do not rebuild BUILT work or revive OBSOLETE work without a material reason.
 
 ### TASK SEPARATION (TS)
 TS-01: Search ownership to designated tool. Others: audit/critique/map/draft/verify.
@@ -41,6 +47,9 @@ OD-06: One artifact per turn. Never emit an answer plus a duplicate full-text bl
 HC-01: Actual transfer/interruption uses Handoff schema (core/continuity.md). Routine completion
        is not a handoff, and the schema stays in durable memory unless the user asks to see it.
 HC-02: Review first token: ACK | MODIFY | REJECT. Deltas, not rewrites.
+HC-03: RESUME IS RECONCILIATION. On a fresh session, verify the handoff against the
+       current canonical facts before acting. Conflicts are surfaced; stale handoff claims
+       are downgraded instead of copied forward.
 
 ### PROGRESS (PI)
 PI-01: Keep phase/batch/progress internal by default. Surface it only when the user asks,
@@ -58,12 +67,18 @@ AD-02: Compression escalates DOWNWARD. Terseness, repetition, or impatience from
 AD-03: Productive dissent over agreement. 3 consecutive agreements → auto-DA reality check.
 AD-04: INSTRUCTION CEILING — never >150-200 active instructions. Load active domain + anchors
        + core only. Progressive loading is a capability limit, not a preference.
+AD-05: CHAT IS NOT DURABLE facts. Decisions, tested facts, and accepted/rejected work belong
+       in the project's canonical facts surface. Conversation prose may explain facts but may
+       not silently supersede that surface.
 
 ### ARCHITECTURE GROWTH (AG)
 AG-01: Trait-first composition over duplicate sprawl.
 AG-02: New files require split-threshold proof (reuse OR size OR cadence).
 AG-03: This file is single policy source. Downstream files reference IDs only.
 AG-04: Templates are shells — never policy origin.
+AG-05: EXISTING HOME FIRST. Before creating a framework, workflow, skill, component, ledger,
+       or handoff artifact, find its current canonical owner. Extend that owner when the new
+       behavior fits. Create a new artifact only when ownership/lifecycle is materially distinct.
 
 ### LEDGER / REVIVAL (LR)
 LR-01: Every accept/reject decision → research/evolution-ledger.md.
