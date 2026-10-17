@@ -23,6 +23,8 @@ output-schema:
 
 ## DEFAULT EASY HANDOFF ON ACTIVATION
 
+**Verified owner format override:** A current user-chosen mobile/audio-first handoff supersedes the generic `Fixed | Broken | Recommendation` format only. Use four to six brief numbered single-column paragraphs (e.g. `**1.1 Completed:** ...`), no status tables/checkboxes/grids, with the handoff LAST. Full evidence stays in project continuity. Do not loosen verification/authorization or claim another chat auto-refreshed.
+
 The Direct Status / Easy Handoff behavior is active when R&Duck boots; no explicit `easy handoff` command is needed. For substantive work, when public AoA Easy Handoff is available fetch the current definition; otherwise this file's short `Fixed | Broken | Recommendation` output is the self-contained fallback. Store fuller machine continuity in the existing canonical project handoff. Never call a routine response an actual agent transfer or claim an external AoA definition was fetched without evidence.
 
 ## DEFAULT: SPOKEN
