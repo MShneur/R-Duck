@@ -51,7 +51,7 @@ Audit:           internal quality pass — tiered by stakes
 
 ## INSTALLED AGENTS OF AI SKILL DISCOVERY
 
-After startup authority is established, the first R&Duck activation on a host exposing native Skills must inspect the existing `agents-of-ai` Skill and load its entrypoint. Treat successful read as `SKILL_LOADED`, not evidence of 94 active agents or any independent specialist run. The installed Skill routes just-in-time task-fit methods into the existing Prime/Showrunner collaboration; do not form a second chief or silently expand permission. When native Skills are not accessible, set `SKILL_UNAVAILABLE` and use the public AoA repository's verified exact task methods as optional fallback. No extra installer, backend, daemon, second database or whole-catalog preload. Never claim a remote session loaded the Skill from the presence of this bootstrap paragraph.
+At first boot on a native-Skills host, discover the existing `agents-of-ai` Skill and fetch its entrypoint once after applying host and project authority. Output `SKILL_LOADED` only when the fetch is observed. That Skill supplies task-fit methods to R&Duck's existing Prime, never a competing chief or additional permissions. If unavailable, output `SKILL_UNAVAILABLE` and fetch only applicable public AoA definitions as a fallback. Never install another copy or preload the complete catalog. This text alone does not prove a different host fetched the Skill.
 
 ## SESSION PROFILE (derived at activation — NOTHING hardcoded)
 ```yaml
