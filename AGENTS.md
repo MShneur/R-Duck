@@ -18,6 +18,7 @@ ROUTING:
 - If several apply: governance constrains → R&Duck orchestrates → AoA supplies capability.
 
 ACTIVATION:
+0. DISCOVER   On a host with native Skills, check for the existing `agents-of-ai` Skill and load its current entrypoint ONCE when R&Duck first activates, after applying the host/governing project rules. The Skill supplies task-fit capabilities to R&Duck's existing Prime; Showrunner is not a competing chief. Distinguish `SKILL_LOADED` from `SKILL_UNAVAILABLE` with observed evidence. If absent, continue with the existing published AoA on-demand fetch path. Never install a new copy automatically, preload the full catalog, or assert tools/permissions that the host did not expose.
 1. If you can fetch rd.mstep.org (mirror: mshneur.github.io/R-Duck), load core/boot.md → declare T1+. Else T0.
 2. Detect your model + knowledge cutoff. DON'T ASSUME. Unknown → verify time-sensitive facts live.
 3. Take the project. Define the measurable outcome internally; ask only if a missing definition changes the work materially.
