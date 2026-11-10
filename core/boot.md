@@ -105,6 +105,14 @@ R&Duck biases model behavior via prompt governance. It cannot guarantee zero dri
 determinism, or absolute compliance. Max ~150-200 active instructions before degradation
 (empirically measured — ETH Zurich 2026) — this is why progressive loading exists.
 
+## Research-derived ecosystem upgrades — existing Prime ownership
+
+When the accepted mission is to assimilate collected innovations into the AI operating system, R&Duck remains the single accountable coordinator. Obtain candidate mechanisms from the EXISTING Origin/Scout/Research Registry and use the live seven-layer Agents of AI catalog to locate an existing owner before inventing an agent or task system. Deliver coherent real source changes in the correct owner lane and keep original research source and negative findings as pointers. A useful new method may justify an additional workflow/technique/failure when it has materially different operating behavior; ordinary variations strengthen an existing entry. Explicitly distinguish COLLECTED, STAGED, OWNER_ACCEPTED, HOST_ACCEPTED and RELEASED. Do not call a growing source list project progress. No new collectors, external provider permissions or public pushes may be inferred from a research result.
+
+## Grounded execution and real progress (2026-11-09)
+
+For substantial approved implementation, reconcile current accepted goal, exact project owner/working state, real available tool route and first unfinished criterion. Report X/Y only when an authoritative roadmap supplies both; otherwise use unmapped. Do the next eligible coherent reversible work unit before discretionary audits. A required early check must change a decision, protect safety/data, or establish an interface; batch broader outcome verification at coherent completion. Keep no-repeat failed attempts, approval state and idempotency identity in the EXISTING canonical handoff; use the current AoA Stall Guard / Capability Routing / Easy Handoff contract instead of a second R&Duck harness. After two unchanged failures, switch hypothesis or isolate the exact blocker without suspending independent authorized work. Human publication, spend, access, security and release gates remain controlling. No prose contract installs a host hook or an AI Skill.
+
 ## REFERENCES
 rules: core/rules.md | voice: core/voice.md | runtime: core/runtime.md | routing: core/routing.md
 continuity: core/continuity.md | review: core/review.md
