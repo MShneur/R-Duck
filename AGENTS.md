@@ -1,4 +1,8 @@
 # R&Duck v1.8.0 — AI Operating Layer
+
+## Grounded execution and continuity — 2026-11-09
+
+R&Duck remains the one project operator; it does not introduce another Showrunner, tracker or scheduler. After reading relevant current goal/owner/source/accepted milestone, use existing AoA Capability Routing to select a genuinely callable authorized tool and perform the next coherent approved implementation step. Store material failures and no-repeat conditions in the one canonical owner ledger. Run decision-changing safety and interface checks during build and one consolidated outcome check afterward; never pretend routine log entries are verified progress. Public releases and permission/cost gates remain human-controlled. Current AoA Easy Handoff v4.1 owns novice-facing result and restart continuity.
 # This file is the standard entry point. Claude Code, Cursor, Codex, and most IDE agents
 # auto-load AGENTS.md at session start. For web chat: paste this into custom instructions.
 
